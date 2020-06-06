@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   scope module: :public do
+
   	root 'homes#top'
 
   	get 'users/retire/:id' => 'users#retire', as: 'retire'
