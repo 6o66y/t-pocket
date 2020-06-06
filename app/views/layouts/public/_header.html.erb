@@ -2,12 +2,11 @@
 	<div class="container-fluid">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarEexample4">
-				<span class="sr-only">Toggle navigation</span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand btn btn-default navbar-btn" href="/">
+			<a class="navbar-brand btn navbar-btn" href="/">
 				せんせいのぽけっと
 			</a>
 		</div>
@@ -15,14 +14,14 @@
 		<div class="collapse navbar-collapse" id="navbarEexample4">
 			<ul class="nav navbar-nav navbar-right">
 				<% if user_signed_in? %>
-					<li><%= link_to 'My page', user_path(current_user.id), type: 'button', class: 'btn btn-default navbar-btn' %></li>
-					<li><%= link_to 'New', new_post_path, type: 'button', class: 'btn btn-default navbar-btn' %></li>
-					<li><%= link_to 'Posts', posts_path, type: 'button', class: 'btn btn-default navbar-btn' %></li>
-					<li><%= link_to 'Users', users_path, type: 'button', class: 'btn btn-default navbar-btn' %></li>
-					<li><%= link_to 'Log out', destroy_user_session_path, method: :delete, type: 'button', class: 'btn btn-default navbar-btn' %></li>
+					<li><%= link_to 'My page', user_path(current_user.id), type: 'button', class: 'btn navbar-btn' %></li>
+					<li><%= link_to 'New', new_post_path, type: 'button', class: 'btn navbar-btn' %></li>
+					<li><%= link_to 'Posts', posts_path, type: 'button', class: 'btn navbar-btn' %></li>
+					<li><%= link_to 'Users', users_path, type: 'button', class: 'btn navbar-btn' %></li>
+					<li><%= link_to 'Log out', destroy_user_session_path, method: :delete, type: 'button', class: 'btn navbar-btn' %></li>
 				<% else %>
-					<li><%= link_to 'Sign in', new_user_session_path, type: 'button', class: 'btn btn-default navbar-btn' %></li>
-					<li><%= link_to 'Sign up', new_user_registration_path, type: 'button', class: 'btn btn-default navbar-btn' %></li>
+					<li><%= link_to 'Sign in', new_user_session_path, type: 'button', class: 'btn navbar-btn' %></li>
+					<li><%= link_to 'Sign up', new_user_registration_path, type: 'button', class: 'btn navbar-btn' %></li>
 				<% end %>
 			</ul>
 		</div>

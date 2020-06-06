@@ -16,3 +16,62 @@
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+
+body {
+	background-color: #005500;
+}
+
+
+/* navbar */
+.navbar-default {
+	background-color: #CC6600;
+	border-color: #990000;
+}
+
+.navbar-btn {
+	background-color: #990000;
+	border-color: #000;
+}
+
+.navbar-default .navbar-btn:hover {
+	background-color: #8B4513;
+	border-color: #000;
+}
+
+.navbar-default .navbar-nav > li > .navbar-btn:hover {
+	background-color: #8B4513;
+	border-color: #000;
+}
+
+.navbar-default .navbar-brand {
+	color: #fff;
+}
+
+.navbar-default .navbar-brand:hover {
+	color: #fff;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: #fff;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+	color: #fff;
+}
+
+.navbar-default .navbar-toggle {
+	border-color: #000;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+	background-color: #8B4513;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #FFE4C4;
+}
+
+.navbar-default .navbar-collapse, {
+	border-color: #990000;
+}
