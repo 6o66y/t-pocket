@@ -9,6 +9,12 @@ class Public::UsersController < ApplicationController
   def edit
   end
 
+  def update
+  end
+
   def retire
+  end
+
+  def update_retire
   end
 end
