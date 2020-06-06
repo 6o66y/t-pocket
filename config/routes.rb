@@ -1,20 +1,21 @@
 Rails.application.routes.draw do
-  namespace :public do
-    get 'comments/edit'
-  end
-  namespace :public do
-    get 'posts/new'
-    get 'posts/index'
-    get 'posts/show'
-    get 'posts/edit'
-  end
-  namespace :public do
-    get 'relationships/following'
-    get 'relationships/followers'
-  end
-  namespace :public do
-    get 'homes/top'
-  end
+
   devise_for :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  scope module: :public do
+  	root 'homes#top'
+
+  	get 'users/retire/:id' => 'users#retire', as: 'retire'
+  	patch 'users/retire/:id' => 'users#update_retire', as: 'update_retire'
+
+  	get 'users/:id/following' => 'relationships#following', as: 'following'
+  	get 'users/:id/followers' => 'relationships#followers', as: 'followers'
+
+  	resources :comments, only: [:create, :edit, :update, :destroy]
+  	resources :likes, only: [:create, :destroy]
+  	resources :posts, only: [:new, :create, :index, :show, :edit, :update, :destroy]
+  	resources :relationships, only: [:create, :destroy]
+  	resources :users, only: [:index, :show, :edit, :update]
+  end
+
 end
