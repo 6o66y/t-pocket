@@ -1,2 +1,45 @@
-<h1>Public::Posts#show</h1>
-<p>Find me in app/views/public/posts/show.html.erb</p>
+<div class="show">
+	<div class="row">
+		<h2  class="col-md-1 text-center">Show</h2>
+	</div>
+
+	<div class="col-md-8">
+		<div class="row">
+			<div class="post_title col-md-4">
+				<%= simple_format(@post.title) %>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="post_objective col-md-8">
+				<%= simple_format(@post.objective) %>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="post_body col-md-8">
+				<%= simple_format(@post.body) %>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="post_review col-md-8">
+				<%= simple_format(@post.review) %>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-4">
+		<div class="row">
+			<%= attachment_image_tag(@post, :image, fallback: 'no_image.jpg', size: '450x300') %>
+		</div>
+
+		<div class="row">
+			<%#= f.label :category %>
+		</div>
+
+		<div class="row">
+			<%= link_to '編集', edit_post_path(@post), class: 'btn post_btn' %>
+		</div>
+	</div>
+</div>
