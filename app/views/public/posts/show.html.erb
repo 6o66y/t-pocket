@@ -35,17 +35,19 @@
 		</div>
 	</div>
 
-	<div class="col-md-4">
-		<div class="row">
-			<%= attachment_image_tag(@post, :image, fallback: 'no_image.jpg', size: '450x300') %>
+	<!-- <div class="col-md-4"> -->
+		<div class="row text-center">
+			<%= attachment_image_tag(@post, :image, size: '400x300') %>
 		</div>
 
 		<div class="row">
 			<%#= f.label :category %>
-		</div>
+		<!-- </div> -->
 
 		<div class="row">
+			<div class="col-md-5">
 			<%= link_to '編集', edit_post_path(@post), class: 'btn post_btn' %>
+		</div>
 		</div>
 	</div>
 </div>
