@@ -1,0 +1,30 @@
+<div class="row">
+	<%= attachment_image_tag(user, :profile_image, fallback: 'no_image.jpg', size: '190x190') %>
+</div>
+
+<div class="row profile_username">
+	<%= user.username %>
+</div>
+
+<div class="row profile_introduction">
+	<%= user.introduction %>
+</div>
+
+<div class="row">
+	<div class="following_btn">
+		<%= link_to 'Following', users_path, type: 'button', class: 'btn btn-default btn-sm col-md-2' %>
+	</div>
+	<div class="follower_btn">
+		<%= link_to 'Followers', users_path, type: 'button', class: 'btn btn-default btn-sm col-md-2' %>
+	</div>
+</div>
+
+
+<div class="row edit_btn">
+	<%= link_to 'Edit',edit_user_path(user), type: 'button', class: 'col-md-5 btn btn-default' %>
+</div>
+
+<div class="row new_btn">
+	<%= link_to 'New',new_post_path, type: 'button', class: 'col-md-5 btn btn-default' %>
+</div>
+

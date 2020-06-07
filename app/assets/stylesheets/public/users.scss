@@ -1,0 +1,72 @@
+// Place all the styles related to the public::users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/* profile */
+.following_btn > .btn-default {
+	background-color: #990000;
+	border-color: #000;
+	color: #fff;
+	margin-top: 20px;
+	margin-right: 30px;
+	margin-left: 3px;
+}
+
+.following_btn > .btn-default:hover {
+	background-color: #FAEBD7;
+	border-color: #000;
+	color: #990000;
+}
+
+.follower_btn > .btn-default {
+	background-color: #fff;
+	border-color: #990000;
+	color: #990000;
+	margin-top: 20px;
+}
+
+.follower_btn > .btn-default:hover {
+	background-color: #FAEBD7;
+	border-color: #000;
+	color: #990000;
+}
+
+.edit_btn > .btn-default {
+	background-color: #CC6600;
+	border-color: #000;
+	color: #fff;
+	margin: 5px auto;
+}
+
+.edit_btn > .btn-default:hover {
+	background-color: #FAEBD7;
+	border-color: #000;
+	color: #990000;
+}
+
+.new_btn > .btn-default {
+	background-color: #660000;
+	border-color: #000;
+	color: #fff;
+}
+
+.new_btn > .btn-default:hover {
+	background-color: #FAEBD7;
+	border-color: #000;
+	color: #990000;
+}
+
+.profile_username {
+	width: 190px;
+	background-color: #fff;
+	text-align: center;
+	margin-bottom: 1px;
+}
+
+.profile_introduction {
+	width: 190px;
+	height: 150px;
+	background-color: #fff;
+}
+

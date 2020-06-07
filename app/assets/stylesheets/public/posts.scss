@@ -1,0 +1,43 @@
+// Place all the styles related to the public::posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.new h2, .show h2, .edit h2 {
+	color: #fff;
+	background-color: #990000;
+}
+
+.post_title {
+	margin-bottom: 10px;
+	background-color: #fff;
+}
+
+.post_objective {
+	margin-bottom: 10px;
+	height: 80px;
+	background-color: #fff;
+}
+
+.post_body {
+	margin-bottom: 10px;
+	height: 500px;
+	background-color: #fff;
+}
+
+.post_review {
+	margin-bottom: 10px;
+	height: 100px;
+	background-color: #fff;
+}
+
+.post_btn {
+	background-color: #990000;
+	border-color: #000;
+	color: #fff;
+}
+
+.post_btn:hover {
+	background-color: #FAEBD7;
+	border-color: #000;
+	color: #990000;
+}

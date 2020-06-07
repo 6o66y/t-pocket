@@ -1,0 +1,49 @@
+<div class="container sign_up">
+  <div class="row">
+    <h2 class="text-center">Sign up</h2>
+  </div>
+
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+      <div class="row">
+        <table class="col-md-11 sign_up_table">
+          <tr>
+            <th class="col-md-3 text-right"><%= f.label '氏名' %></th>
+            <td class="col-md-3"><%= f.text_field :name, autofocus: true, autocomplete: "name" %></td>
+          </tr>
+
+          <tr>
+            <th class="col-md-3 text-right"><%= f.label 'ユーザー名' %></th>
+            <td class="col-md-3"><%= f.text_field :username, autofocus: true, autocomplete: "username" %></td>
+          </tr>
+
+          <tr>
+            <th class="col-md-3 text-right"><%= f.label 'メールアドレス' %></th>
+            <td class="col-md-3"><%= f.email_field :email, autofocus: true, autocomplete: "email" %></td>
+          </tr>
+
+          <tr>
+            <th class="col-md-3 text-right">
+              <%= f.label 'パスワード' %>
+              <% if @minimum_password_length %>
+              <em>(<%= @minimum_password_length %> 文字以上)</em>
+              <% end %>
+            </th>
+            <td class="col-md-3"><%= f.password_field :password, autocomplete: "new-password" %></td>
+          </tr>
+
+          <tr>
+            <th class="col-md-3 text-right"><%= f.label 'パスワード確認' %></th>
+            <td class="col-md-3"><%= f.password_field :password_confirmation, autocomplete: "new-password" %></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="row text-center">
+        <%= f.submit "Sign up", class: 'btn sigh_up_btn' %>
+      </div>
+  <% end %>
+
+      <%#= render "devise/shared/links" %>
+</div>

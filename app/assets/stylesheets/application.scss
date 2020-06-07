@@ -16,3 +16,151 @@
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+
+body {
+	background-color: #005500;
+}
+
+
+/* navbar */
+.p_h_btn {
+	margin-left :10px;
+	margin-right :10px;
+}
+
+.navbar-default {
+	background-color: #CC6600;
+	border-color: #990000;
+}
+
+.navbar-btn {
+	background-color: #990000;
+	border-color: #000;
+}
+
+.navbar-default .navbar-btn:hover {
+	background-color: #8B4513;
+	border-color: #000;
+}
+
+.navbar-default .navbar-nav > li > .navbar-btn:hover {
+	background-color: #8B4513;
+	border-color: #000;
+}
+
+.navbar-default .navbar-brand {
+	color: #fff;
+}
+
+.navbar-default .navbar-brand:hover {
+	color: #fff;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: #fff;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+	color: #fff;
+}
+
+.navbar-default .navbar-toggle {
+	border-color: #000;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+	background-color: #8B4513;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #FFE4C4;
+}
+
+.navbar-default .navbar-collapse, {
+	border-color: #990000;
+}
+/* navbar */
+
+
+
+/* sign_up */
+.sign_up h2 {
+	color: #fff;
+	margin-bottom: 50px;
+}
+
+.sign_up label, em {
+	color: #fff;
+}
+
+.sign_up em {
+	font-size: 10px;
+}
+
+.sign_up table {
+	margin-bottom: 30px;
+}
+
+.sign_up_table td {
+	padding-bottom: 10px;
+}
+
+.sigh_up_btn {
+	background-color: #FFFF33;
+	border-color: #000;
+	color: #FF0000;
+}
+
+.sigh_up_btn:hover {
+	background-color: #FFFF33;
+	border-color: #000;
+	color: #FF0000;
+}
+/* sign_up */
+
+
+
+/* sign_in */
+.sign_in h2 {
+	color: #fff;
+	margin-bottom: 50px;
+}
+
+.sign_in label {
+	color: #fff;
+}
+
+.sign_in table {
+	margin-bottom: 30px;
+}
+
+.sign_in_table td {
+	padding-bottom: 10px;
+}
+
+.sigh_in_btn {
+	background-color: #FFFF33;
+	border-color: #000;
+	color: #FF0000;
+}
+
+.sigh_in_btn:hover {
+	background-color: #FFFF33;
+	border-color: #000;
+	color: #FF0000;
+}
+
+.sigh_in_render {
+	color: #fff;
+}
+
+.sigh_in_render:hover {
+	color: #fff;
+}
+/* sign_in */
+
+
+
+
+
