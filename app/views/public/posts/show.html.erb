@@ -1,9 +1,15 @@
 <div class="show">
 	<div class="row">
-		<h2  class="col-md-1 text-center">Show</h2>
+		<h2 class="col-md-1 text-center">Show</h2>
 	</div>
 
 	<div class="col-md-8">
+		<div class="row">
+			<div class=" post_show_user text-center">
+				<%= render 'public/users/profile_image', user: @post.user %><br>
+				<%= @post.user.username %>
+			</div>
+		</div>
 		<div class="row">
 			<div class="post_title col-md-4">
 				<%= simple_format(@post.title) %>
