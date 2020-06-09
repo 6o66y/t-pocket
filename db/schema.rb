@@ -20,22 +20,22 @@ ActiveRecord::Schema.define(version: 2020_06_06_100931) do
   end
 
   create_table "comments", force: :cascade do |t|
-    t.integer "user_id_id"
-    t.integer "post_id_id"
+    t.integer "user_id"
+    t.integer "post_id"
     t.text "post_comment", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["post_id_id"], name: "index_comments_on_post_id_id"
-    t.index ["user_id_id"], name: "index_comments_on_user_id_id"
+    t.index ["post_id"], name: "index_comments_on_post_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "likes", force: :cascade do |t|
-    t.integer "user_id_id"
-    t.integer "post_id_id"
+    t.integer "user_id"
+    t.integer "post_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["post_id_id"], name: "index_likes_on_post_id_id"
-    t.index ["user_id_id"], name: "index_likes_on_user_id_id"
+    t.index ["post_id"], name: "index_likes_on_post_id"
+    t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -51,12 +51,12 @@ ActiveRecord::Schema.define(version: 2020_06_06_100931) do
   end
 
   create_table "relationships", force: :cascade do |t|
-    t.integer "user_id_id"
+    t.integer "user_id"
     t.integer "follower_id"
     t.integer "following_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id_id"], name: "index_relationships_on_user_id_id"
+    t.index ["user_id"], name: "index_relationships_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

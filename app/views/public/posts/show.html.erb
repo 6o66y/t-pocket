@@ -35,12 +35,12 @@
 		</div>
 	</div>
 
-	<!-- <div class="col-md-4"> -->
+	<div class="col-md-4">
 		<div class="row text-center">
 			<%= attachment_image_tag(@post, :image, size: '400x300') %>
 		</div>
 
-		<div class="row">
+		<!-- <div class="row"> -->
 			<%#= f.label :category %>
 		<!-- </div> -->
 
@@ -48,6 +48,41 @@
 			<div class="col-md-5">
 			<%= link_to '編集', edit_post_path(@post), class: 'btn post_btn' %>
 		</div>
+
+		<div class="row">
+			<table>
+				<!-- コメントフォーム -->
+				<thead>
+					<tr>
+						<th><%= form_with(model: [@post, @comment], local: true) do |f| %>
+								<%= f.text_area :post_comment, rows:'6',placeholder: 'コメント' %>
+								<%= f.submit '送信' %>
+							<% end %>
+						</th>
+					</tr>
+				</thead>
+
+				<!-- コメント一覧 -->
+				<tbody>
+					<% @comments.each do |comment| %>
+						<tr>
+							<td>
+								<%= link_to user_path(comment.user) do%>
+									<%= render 'public/users/profile_image', user: comment.user %><br>
+									<%= comment.user.username %>
+								<% end %>
+							</td>
+
+							<td><%= comment.post_comment %></td>
+
+							<td><%= link_to '編集',edit_post_comment_path(@post), class: 'btn post_btn' %>
+
+								<%= link_to '削除', post_comment_path(@post), method: :delete, type: 'button', class: 'btn post_btn' %>
+							</td>
+						</tr>
+					<% end %>
+				</tbody>
+			</table>
 		</div>
 	</div>
 </div>
