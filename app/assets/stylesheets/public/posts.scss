@@ -34,7 +34,8 @@
 	background-color: #990000;
 	border-color: #000;
 	color: #fff;
-	margin-left: 10px;
+	margin-left: 30px;
+	margin-top: 20px;
 }
 
 .post_btn:hover {
@@ -47,3 +48,36 @@
 	margin_bottom: 5px;
 	color: #fff;
 }
+
+.new_attachment, .edit_attachment {
+	margin-left: 110px;
+	color: #fff;
+}
+
+
+/* edit */
+.edit_post_btn {
+	background-color: #990000;
+	border-color: #000;
+	color: #fff;
+}
+
+.edit_post_btn:hover {
+	background-color: #FAEBD7;
+	border-color: #000;
+	color: #990000;
+}
+
+.edit_delete_btn {
+	background-color: #fff;
+	border-color: #990000;
+	color: #990000;
+	margin-left: 10px;
+}
+
+.edit_delete_btn:hover {
+	background-color: #FAEBD7;
+	border-color: #000;
+	color: #990000;
+}
+/* edit */

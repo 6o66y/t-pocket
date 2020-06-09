@@ -1,36 +1,38 @@
 <div class="edit">
 	<div class="row">
-		<h2  class="col-md-1 text-center">Edit</h2>
+		<h2 class="col-md-1 text-center">Edit</h2>
 	</div>
 
 	<%=form_with model: @post, url: post_path(@post), local: true do |f| %>
-		<div class="col-md-8">
+		<div class="col-md-6">
 			<div class="row">
 				<%= f.text_field :title, placeholder: 'タイトル', class: 'post_title col-md-4' %>
 			</div>
 
 			<div class="row">
-				<%= f.text_area :objective, placeholder: 'めあて', class: 'post_objective col-md-8' %>
+				<%= f.text_area :objective, placeholder: 'めあて', class: 'post_objective col-md-12' %>
 			</div>
 
 			<div class="row">
-				<%= f.text_area :body, placeholder: 'テキスト', class: 'post_body col-md-8' %>
+				<%= f.text_area :body, placeholder: 'テキスト', class: 'post_body col-md-12' %>
 			</div>
 
 			<div class="row">
-				<%= f.text_area :review, placeholder: 'ふりかえり', class: 'post_review col-md-8' %>
+				<%= f.text_area :review, placeholder: 'ふりかえり', class: 'post_review col-md-12' %>
 			</div>
 		</div>
 
-		<div class="col-md-4">
+		<div class="col-md-5 text-right">
 			<%= attachment_image_tag(@post, :image, fallback: 'no_image.jpg', size: '450x300') %>
-			<%= f.attachment_field :image %>
+			<div class="edit_attachment">
+				<%= f.attachment_field :image %>
+			</div>
 
 			<%#= f.label :category %>
 
-			<%= f.submit '変更を保存', class: 'btn post_btn' %>
+			<%= f.submit '変更を保存', class: 'btn edit_post_btn' %>
 
-			<%= link_to '削除', post_path(@post), method: :delete, type: 'button', class: 'btn post_btn' %>
+			<%= link_to '削除', post_path(@post), method: :delete, type: 'button', data: {confirm: '本当に消しますか？'}, class: 'btn edit_delete_btn' %>
 		</div>
 	<% end %>
 </div>
