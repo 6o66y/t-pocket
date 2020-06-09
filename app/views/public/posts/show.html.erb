@@ -75,9 +75,9 @@
 
 							<td><%= comment.post_comment %></td>
 
-							<td><%= link_to '編集',edit_post_comment_path(@post), class: 'btn post_btn' %>
+							<td><%= link_to '編集',edit_post_comment_path(comment), class: 'btn post_btn' %>
 
-								<%= link_to '削除', post_comment_path(comment.id), method: :delete, type: 'button', class: 'btn post_btn' %>
+								<%= link_to '削除', post_comment_path(comment), method: :delete, type: 'button', class: 'btn post_btn' %>
 							</td>
 						</tr>
 					<% end %>
