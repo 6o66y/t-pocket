@@ -19,7 +19,7 @@
 				<tr>
 					<td>
 						<%= link_to user_path(user) do%>
-							<%= attachment_image_tag(user, :profile_image, fallback: 'no_image.jpg', size: '60x60') %>
+							<%= render 'public/users/profile_image', user: user %>
 						<% end %>
 					</td>
 					<td><%= link_to user_path(user) do%>
@@ -31,7 +31,4 @@
 			<% end %>
 		</tbody>
 	</table>
-
-	<% @users.each do |user| %>
-	<% end %>
 </div>
