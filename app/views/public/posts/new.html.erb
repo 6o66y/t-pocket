@@ -28,7 +28,9 @@
 				<%= f.attachment_field :image %>
 			</div>
 
-			<%#= f.label :category %>
+			<div class="new_category">
+				<%= f.collection_select :is_displayed, Category.where(is_displayed: true), :id, :name, include_blank: '-- カテゴリー選択 --' %>
+			</div>
 
 			<%= f.submit '投稿', class: 'btn post_btn' %>
 		</div>
