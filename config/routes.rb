@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  devise_for :admin_accounts, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   devise_for :users
 
   scope module: :public do
