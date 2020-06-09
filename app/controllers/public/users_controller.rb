@@ -22,9 +22,14 @@ class Public::UsersController < ApplicationController
   end
 
   def retire
+    @user = User.find(params[:id])
   end
 
   def update_retire
+    @user = User.find(params[:id])
+    @user.update(is_deleted: true)
+    reset_session # ログアウト
+    redirect_to root_path
   end
 
   private

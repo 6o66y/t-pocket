@@ -108,6 +108,20 @@
 	color: #990000;
 }
 
+.user_edit_b > .btn-warning {
+	background-color: #CC6600;
+	border-color: #000;
+	color: #fff;
+	margin-left: 75px;
+	margin-top: 10px;
+}
+
+.user_edit_b > .btn-warning:hover {
+	background-color: #440000;
+	border-color: #000;
+	color: #FAEBD;
+}
+
 .user_edit_table td {
 	padding-bottom: 10px;
 }

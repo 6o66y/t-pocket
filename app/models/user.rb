@@ -6,4 +6,9 @@ class User < ApplicationRecord
 
   has_many :posts, dependent: :destroy
   attachment :profile_image
+
+  # [設定]退会するとログインできない
+  def active_for_authentication?
+    self.is_deleted == false
+  end
 end
