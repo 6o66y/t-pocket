@@ -12,24 +12,28 @@
 		</div>
 		<div class="row">
 			<div class="post_title col-md-4">
+				<!-- タイトル -->
 				<%= simple_format(@post.title) %>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="post_objective">
+				<!-- めあて -->
 				<%= simple_format(@post.objective) %>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="post_body">
+				<!-- 詳細 -->
 				<%= simple_format(@post.body) %>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="post_review">
+				<!-- ふりかえり -->
 				<%= simple_format(@post.review) %>
 			</div>
 		</div>
@@ -37,9 +41,11 @@
 
 	<div class="col-md-5">
 		<div class="row text-center">
+			<!-- image -->
 			<%= attachment_image_tag(@post, :image, size: '400x300') %>
 		</div>
 
+		<!-- カテゴリー -->
 		<!-- <div class="row"> -->
 			<%#= f.label :category %>
 		<!-- </div> -->
@@ -83,7 +89,7 @@
 
 							<td><%= link_to '編集',edit_post_comment_path(comment), class: 'btn comment_btn' %>
 
-								<%= link_to '削除', post_comment_path(comment), method: :delete, data: {confirm: '本当に消しますか？'}, class: 'btn comment_delete_btn' %>
+								<%= link_to '削除', post_comment_path(comment), method: :delete, data: {confirm: '本当に削除しますか？'}, class: 'btn comment_delete_btn' %>
 							</td>
 						</tr>
 					<% end %>

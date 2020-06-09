@@ -4,11 +4,13 @@
 
 
 /* comment */
+/* コメントフォームの設定 */
 .comment_form {
 	width: 100%;
 	margin: 30px;
 }
 
+/* コメント表示の設定 */
 .comment_table {
 	margin-left: 30px;
 	margin-top: 50px;
@@ -25,6 +27,7 @@
 	color: #fff;
 }
 
+/* コメントしたユーザー名設定 */
 .show_username {
 	color: #fff;
 }
@@ -33,6 +36,7 @@
 	color: #fff;
 }
 
+/* 「編集」ボタンの設定 */
 .comment_btn {
 	background-color: #990000;
 	border-color: #000;
@@ -46,6 +50,7 @@
 	color: #990000;
 }
 
+/* 「削除」ボタンの設定 */
 .comment_delete_btn {
 	background-color: #fff;
 	border-color: #990000;
@@ -60,6 +65,7 @@
 	margin-left: 10px;
 }
 
+/* 「送信」ボタンの設定 */
 .comment_submit {
 	border-color: #00f;
 	color: #00f;
@@ -68,12 +74,14 @@
 
 
 
-/* comment_edit */
-.comment_edit h2 {
+/* edit_comment */
+/* 見出しの設定 */
+.edit_comment h2 {
 	color: #fff;
 	margin-left: 30px;
 }
 
+/* コメント編集フォームの設定 */
 .edit_comment_form {
 	width:100%;
 }

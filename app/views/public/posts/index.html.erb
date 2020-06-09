@@ -20,17 +20,22 @@
 			<% @posts.each do |post| %>
 				<tr>
 					<td>
+						<!-- ユーザー -->
 						<%= link_to user_path(post.user) do%>
 							<%= render 'public/users/profile_image', user: post.user %><br>
 							<%= post.user.username %>
 						<% end %>
 					</td>
 					<td><%= link_to post_path(post) do%>
+							<!-- 投稿　タイトル -->
 							<%= post.title %>
 						<% end %>
 					</td>
+						<!-- カテゴリー -->
 					<td><%#= post.category %></td>
+						<!-- コメント件数 -->
 					<td><%#= post.comments.cunt %></td>
+						<!-- いいね数 -->
 					<td><%#= post.likes.cunt %></td>
 				</tr>
 			<% end %>
