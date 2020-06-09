@@ -1,35 +1,40 @@
-<h2>User Edit</h2>
+<div class="user_edit">
+	<div class="row">
+		<h2 class="text-center">Edit　User</h2>
+	</div>
 
-<%= form_with model: @user, url: user_path(@user), local: true do |f| %>
-	<table>
-		<tr>
-			<th><%= attachment_image_tag(@user, :profile_image, fallback: 'no_image.jpg', size: '60x60') %></th>
-			<td><%= f.attachment_field :profile_image %></td>
-		</tr>
+	<%= form_with model: @user, url: user_path(@user), local: true do |f| %>
+		<table class="col-md-11 user_edit_table">
+			<tr>
+				<th class="col-md-3 text-right"><%= attachment_image_tag(@user, :profile_image, fallback: 'no_image.jpg', size: '60x60') %></th>
+				<td class="col-md-3 user_e_attachment"><%= f.attachment_field :profile_image %></td>
+			</tr>
 
-		<tr>
-			<th><%= f.label '氏名' %></th>
-			<td><%= f.text_field :name %></td>
-		</tr>
+			<tr>
+				<th class="col-md-3 text-right"><%= f.label '氏名' %></th>
+				<td class="col-md-3"><%= f.text_field :name %></td>
+			</tr>
 
-		<tr>
-			<th><%= f.label 'ユーザー名' %></th>
-			<td><%= f.text_field :username %></td>
-		</tr>
+			<tr>
+				<th class="col-md-3 text-right"><%= f.label 'ユーザー名' %></th>
+				<td class="col-md-3"><%= f.text_field :username %></td>
+			</tr>
 
-		<tr>
-			<th><%= f.label 'メールアドレス' %></th>
-			<td><%= f.email_field :email %></td>
-		</tr>
+			<tr>
+				<th class="col-md-3 text-right"><%= f.label 'メールアドレス' %></th>
+				<td class="col-md-3"><%= f.email_field :email %></td>
+			</tr>
 
-		<tr>
-			<th><%= f.label '自己紹介' %></th>
-			<td><%= f.text_field :introduction %></td>
-		</tr>
-	</table>
+			<tr>
+				<th class="col-md-3 text-right"><%= f.label '自己紹介' %></th>
+				<td class="col-md-3"><%= f.text_field :introduction %></td>
+			</tr>
+		</table>
 
-      <div class="">
-        <%= f.submit '変更を保存', class: 'btn' %>
-        <%= link_to 'パスワードを変更', edit_user_password_path, class: 'btn btn-default' %>
-      </div>
-  <% end %>
+	      <div class="user_edit_b text-center">
+	        <%= f.submit '変更を保存', class: 'btn user_edit_btn' %>
+	        <%= link_to 'パスワードを変更', edit_user_password_path, class: 'btn btn-default' %><br>
+	        <%= link_to '退会する', retire_path(@user), class: 'btn btn-warning' %>
+	      </div>
+	<% end %>
+</div>

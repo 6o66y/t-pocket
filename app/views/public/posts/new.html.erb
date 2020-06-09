@@ -4,27 +4,29 @@
 	</div>
 
 	<%=form_with model: @post, url: posts_path, local: true do |f| %>
-		<div class="col-md-8">
+		<div class="col-md-6">
 			<div class="row">
-				<%= f.text_field :title, placeholder: 'タイトル', class: 'post_title col-md-4' %>
+				<%= f.text_field :title, placeholder: 'タイトル', class: 'post_title col-md-12' %>
 			</div>
 
 			<div class="row">
-				<%= f.text_area :objective, placeholder: 'めあて', class: 'post_objective col-md-8' %>
+				<%= f.text_area :objective, placeholder: 'めあて', class: 'post_objective col-md-12' %>
 			</div>
 
 			<div class="row">
-				<%= f.text_area :body, placeholder: 'テキスト', class: 'post_body col-md-8' %>
+				<%= f.text_area :body, placeholder: 'テキスト', class: 'post_body col-md-12' %>
 			</div>
 
 			<div class="row">
-				<%= f.text_area :review, placeholder: 'ふりかえり', class: 'post_review col-md-8' %>
+				<%= f.text_area :review, placeholder: 'ふりかえり', class: 'post_review col-md-12' %>
 			</div>
 		</div>
 
-		<div class="col-md-4">
+		<div class="col-md-5 text-right">
 			<%= attachment_image_tag(@post, :image, fallback: 'no_image.jpg', size: '450x300') %>
-			<%= f.attachment_field :image %>
+			<div class="new_attachment">
+				<%= f.attachment_field :image %>
+			</div>
 
 			<%#= f.label :category %>
 

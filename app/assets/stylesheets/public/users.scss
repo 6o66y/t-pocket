@@ -4,6 +4,7 @@
 
 
 /* profile */
+/* 「Following」ボタンの設定 */
 .following_btn > .btn-default {
 	background-color: #990000;
 	border-color: #000;
@@ -19,6 +20,7 @@
 	color: #990000;
 }
 
+/* 「Follower」ボタンの設定 */
 .follower_btn > .btn-default {
 	background-color: #fff;
 	border-color: #990000;
@@ -32,6 +34,7 @@
 	color: #990000;
 }
 
+/* 「Edit」ボタンの設定 */
 .edit_btn > .btn-default {
 	background-color: #CC6600;
 	border-color: #000;
@@ -45,6 +48,7 @@
 	color: #990000;
 }
 
+/* 「New」ボタンの設定 */
 .new_btn > .btn-default {
 	background-color: #660000;
 	border-color: #000;
@@ -57,6 +61,7 @@
 	color: #990000;
 }
 
+/* ユーザー名の設定 */
 .profile_username {
 	width: 190px;
 	background-color: #fff;
@@ -64,9 +69,121 @@
 	margin-bottom: 1px;
 }
 
+/* 自己紹介の設定 */
 .profile_introduction {
 	width: 190px;
 	height: 150px;
 	background-color: #fff;
 }
+/* profile */
+
+
+
+
+/* edit */
+/* 見出しの設定 */
+.user_edit h2 {
+	color: #fff;
+	background-color: #990000;
+	margin-bottom: 50px;
+}
+
+/* 「変更を保存」ボタンの設定 */
+.user_edit_btn {
+	background-color: #990000;
+	border-color: #000;
+	color: #fff;
+	margin-top: 20px;
+	margin-right: 30px;
+	margin-left: 3px;
+}
+
+.user_edit_btn:hover {
+	background-color: #FAEBD7;
+	border-color: #000;
+	color: #990000;
+}
+
+/* 「パスワードを変更」ボタンの設定 */
+.user_edit_b > .btn-default {
+	background-color: #fff;
+	border-color: #990000;
+	color: #990000;
+	margin-top: 20px;
+}
+
+.user_edit_b > .btn-default:hover {
+	background-color: #FAEBD7;
+	border-color: #000;
+	color: #990000;
+}
+
+/* 「退会する」ボタンの設定 */
+.user_edit_b > .btn-warning {
+	background-color: #CC6600;
+	border-color: #000;
+	margin-left: 75px;
+	margin-top: 10px;
+}
+
+.user_edit_b > .btn-warning:hover {
+	background-color: #440000;
+	border-color: #000;
+	color: #FAEBD;
+}
+
+/* ユーザー情報入力フォームの設定 */
+.user_edit_table td {
+	padding-bottom: 10px;
+}
+
+.user_edit_table label {
+	color: #fff;
+}
+
+.user_e_attachment {
+	color: #fff;
+}
+/* edit */
+
+
+
+/* retire */
+/* 退会ページの設定 */
+.retire_background {
+	background-color: #fff;
+	padding: 10px;
+	margin: 50px;
+}
+
+/* 退会ページの設定 */
+.retire_btn > .btn-primary {
+	border-color: #000;
+	margin: 10px;
+}
+
+/* 「退会しない」ボタンの設定 */
+.retire_btn > .btn-primary:hover {
+	background-color: #000080;
+}
+
+.retire_btn > .btn-danger {
+	background-color: #f00;
+	border-color: #000;
+	margin: 10px;
+}
+
+/* 「退会する」ボタンの設定 */
+.retire_btn > .btn-danger:hover {
+	background-color: #660000;
+	border-color: #000;
+}
+/* retire */
+
+
+
+
+
+
+
 
