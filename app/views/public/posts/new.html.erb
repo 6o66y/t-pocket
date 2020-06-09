@@ -29,7 +29,7 @@
 			</div>
 
 			<div class="new_category">
-				<%= f.collection_select :is_displayed, Category.where(is_displayed: true), :id, :name, include_blank: '-- カテゴリー選択 --' %>
+				<%= f.collection_select :category_id, Category.where(is_displayed: true), :id, :name, include_blank: '-- カテゴリー選択 --' %>
 			</div>
 
 			<%= f.submit '投稿', class: 'btn post_btn' %>

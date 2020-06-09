@@ -67,6 +67,22 @@
 	color: #fff;
 }
 
+/* [show]カテゴリーの設定 */
+.post_category {
+	margin-left: 10px;
+	margin-top: 10px;
+	background-color: #FAEBD7;
+	color: #990000;
+	border-color: #990000;
+}
+
+/* [show]日付の設定 */
+.post_datetime {
+	color: #fff;
+	margin-top: 10px;
+	margin-left: 40px;
+}
+
 /* [edit] 「変更を保存」ボタンの設定 */
 .edit_post_btn {
 	background-color: #990000;
@@ -92,4 +108,10 @@
 	background-color: #FAEBD7;
 	border-color: #000;
 	color: #990000;
+}
+
+/* [edit] カテゴリー選択の設定 */
+.edit_category {
+	margin-top: 20px;
+	margin-bottom: 20px;
 }

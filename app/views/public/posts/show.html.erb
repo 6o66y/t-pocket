@@ -15,6 +15,13 @@
 				<!-- タイトル -->
 				<%= simple_format(@post.title) %>
 			</div>
+			<div class="post_category text-center col-md-3">
+				<!-- カテゴリー -->
+				<%= @post.category.name %>
+			</div>
+			<div class="post_datetime text-right col-md-4">
+				<%= @post.created_at.strftime("%Y-%m-%d %H:%M:%S") %>
+			</div>
 		</div>
 
 		<div class="row">
@@ -44,11 +51,6 @@
 			<!-- image -->
 			<%= attachment_image_tag(@post, :image, size: '400x300') %>
 		</div>
-
-		<!-- カテゴリー -->
-		<!-- <div class="row"> -->
-			<%#= f.label :category %>
-		<!-- </div> -->
 
 		<div class="row text-left">
 			<%= link_to '投稿を編集', edit_post_path(@post), class: 'btn post_btn' %>
