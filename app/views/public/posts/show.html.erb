@@ -4,10 +4,14 @@
 	</div>
 
 	<div class="col-md-6">
-		<div class="row">
-			<div class=" post_show_user text-center">
-				<%= render 'public/users/profile_image', user: @post.user %><br>
-				<%= @post.user.username %>
+		<div class="row p_s_user">
+			<div class="post_show_user text-center">
+				<%= link_to user_path(@post.user) do%>
+					<%= render 'public/users/profile_image', user: @post.user %><br>
+					<div class="show_username">
+						<%= @post.user.username %>
+					</div>
+				<% end %>
 			</div>
 		</div>
 		<div class="row">
@@ -52,7 +56,7 @@
 			<%= attachment_image_tag(@post, :image, size: '400x300') %>
 		</div>
 
-		<div class="row text-left">
+		<div class="row text-left s_post_btn">
 			<%= link_to '投稿を編集', edit_post_path(@post), class: 'btn post_btn' %>
 		</div>
 
@@ -62,7 +66,7 @@
 				<%= form_with(model: [@post, @comment], local: true) do |f| %>
 					<%= f.text_area :post_comment, rows:'6',placeholder: 'コメント', class: 'col-md-11' %>
 					<div class="col-md-1 comment_submit">
-						<%= f.submit '送信' %>
+						<%= f.submit '送信', class: 'c_submit' %>
 					</div>
 				<% end %>
 			</div>
@@ -81,15 +85,17 @@
 					<% @comments.each do |comment| %>
 						<tr>
 							<td>
-								<%= link_to user_path(comment.user), class: 'show_username' do%>
+								<%= link_to user_path(comment.user) do%>
 									<%= render 'public/users/profile_image', user: comment.user %><br>
-									<%= comment.user.username %>
+									<div class="show_username">
+										<%= comment.user.username %>
+									</div>
 								<% end %>
 							</td>
 
 							<td class="text-left"><%= comment.post_comment %></td>
 
-							<td><%= link_to '編集',edit_post_comment_path(comment), class: 'btn comment_btn' %>
+							<td class="s_comment_btn"><%= link_to '編集',edit_post_comment_path(comment), class: 'btn comment_btn' %>
 
 								<%= link_to '削除', post_comment_path(comment), method: :delete, data: {confirm: '本当に削除しますか？'}, class: 'btn comment_delete_btn' %>
 							</td>
