@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2020_06_06_100931) do
   create_table "comments", force: :cascade do |t|
     t.integer "user_id_id"
     t.integer "post_id_id"
-    t.text "comment", null: false
+    t.text "post_comment", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["post_id_id"], name: "index_comments_on_post_id_id"
@@ -67,7 +67,7 @@ ActiveRecord::Schema.define(version: 2020_06_06_100931) do
     t.datetime "remember_created_at"
     t.string "name", null: false
     t.string "username", null: false
-    t.string "image_id"
+    t.string "profile_image_id"
     t.string "introduction"
     t.boolean "is_deleted", default: false
     t.datetime "created_at", null: false
