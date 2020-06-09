@@ -3,7 +3,7 @@
 		<h2 class="col-md-1 text-center">Show</h2>
 	</div>
 
-	<div class="col-md-8">
+	<div class="col-md-6">
 		<div class="row">
 			<div class=" post_show_user text-center">
 				<%= render 'public/users/profile_image', user: @post.user %><br>
@@ -17,25 +17,25 @@
 		</div>
 
 		<div class="row">
-			<div class="post_objective col-md-8">
+			<div class="post_objective">
 				<%= simple_format(@post.objective) %>
 			</div>
 		</div>
 
 		<div class="row">
-			<div class="post_body col-md-8">
+			<div class="post_body">
 				<%= simple_format(@post.body) %>
 			</div>
 		</div>
 
 		<div class="row">
-			<div class="post_review col-md-8">
+			<div class="post_review">
 				<%= simple_format(@post.review) %>
 			</div>
 		</div>
 	</div>
 
-	<div class="col-md-4">
+	<div class="col-md-5">
 		<div class="row text-center">
 			<%= attachment_image_tag(@post, :image, size: '400x300') %>
 		</div>
@@ -44,30 +44,36 @@
 			<%#= f.label :category %>
 		<!-- </div> -->
 
-		<div class="row">
-			<div class="col-md-5">
-			<%= link_to '編集', edit_post_path(@post), class: 'btn post_btn' %>
+		<div class="row text-left">
+			<%= link_to '投稿を編集', edit_post_path(@post), class: 'btn post_btn' %>
 		</div>
 
-		<div class="row">
-			<table>
-				<!-- コメントフォーム -->
+		<div class="row text-center">
+			<!-- コメントフォーム -->
+			<div class="comment_form">
+				<%= form_with(model: [@post, @comment], local: true) do |f| %>
+					<%= f.text_area :post_comment, rows:'6',placeholder: 'コメント', class: 'col-md-11' %>
+					<div class="col-md-1 comment_submit">
+						<%= f.submit '送信' %>
+					</div>
+				<% end %>
+			</div>
+
+			<!-- コメント一覧 -->
+			<table class="table comment_table col-md-12">
 				<thead>
 					<tr>
-						<th><%= form_with(model: [@post, @comment], local: true) do |f| %>
-								<%= f.text_area :post_comment, rows:'6',placeholder: 'コメント' %>
-								<%= f.submit '送信' %>
-							<% end %>
-						</th>
+						<th class="text-center">Users</th>
+						<th class="text-center">comments</th>
+						<th></th>
 					</tr>
 				</thead>
 
-				<!-- コメント一覧 -->
 				<tbody>
 					<% @comments.each do |comment| %>
 						<tr>
 							<td>
-								<%= link_to user_path(comment.user) do%>
+								<%= link_to user_path(comment.user), class: 'show_username' do%>
 									<%= render 'public/users/profile_image', user: comment.user %><br>
 									<%= comment.user.username %>
 								<% end %>
@@ -75,9 +81,9 @@
 
 							<td><%= comment.post_comment %></td>
 
-							<td><%= link_to '編集',edit_post_comment_path(@post), class: 'btn post_btn' %>
+							<td><%= link_to '編集',edit_post_comment_path(comment), class: 'btn comment_btn' %>
 
-								<%= link_to '削除', post_comment_path(@post), method: :delete, type: 'button', class: 'btn post_btn' %>
+								<%= link_to '削除', post_comment_path(comment), method: :delete, data: {confirm: '本当に消しますか？'}, class: 'btn comment_delete_btn' %>
 							</td>
 						</tr>
 					<% end %>

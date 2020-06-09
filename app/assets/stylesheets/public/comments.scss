@@ -1,3 +1,79 @@
 // Place all the styles related to the public::comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/* comment */
+.comment_form {
+	width: 100%;
+	margin: 30px;
+}
+
+.comment_table {
+	margin-left: 30px;
+	margin-top: 50px;
+	border-color: #000;
+}
+
+.comment_table th {
+	background-color: #FFFF00;
+	color: #f00;
+}
+
+.comment_table td {
+	color: #fff;
+}
+
+.show_username {
+	color: #fff;
+}
+
+.show_username:hover {
+	color: #fff;
+}
+
+.comment_btn {
+	background-color: #990000;
+	border-color: #000;
+	color: #fff;
+	margin-left: 10px;
+}
+
+.comment_btn:hover {
+	background-color: #FAEBD7;
+	border-color: #000;
+	color: #990000;
+}
+
+.comment_delete_btn {
+	background-color: #fff;
+	border-color: #990000;
+	color: #990000;
+	margin-left: 10px;
+}
+
+.comment_delete_btn:hover {
+	background-color: #FAEBD7;
+	border-color: #000;
+	color: #fff;
+	margin-left: 10px;
+}
+
+.comment_submit {
+	border-color: #00f;
+	color: #00f;
+}
+/* comment */
+
+
+
+/* comment_edit */
+.comment_edit h2 {
+	color: #fff;
+	margin-left: 30px;
+}
+
+.edit_comment_form {
+	width:100%;
+}
+/* comment_edit */
