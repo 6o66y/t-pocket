@@ -69,6 +69,7 @@
 	height: 150px;
 	background-color: #fff;
 }
+/* profile */
 
 
 
@@ -111,7 +112,6 @@
 .user_edit_b > .btn-warning {
 	background-color: #CC6600;
 	border-color: #000;
-	color: #fff;
 	margin-left: 75px;
 	margin-top: 10px;
 }
@@ -133,8 +133,37 @@
 .user_e_attachment {
 	color: #fff;
 }
+/* edit */
 
 
+
+/* retire */
+.retire_background {
+	background-color: #fff;
+	padding: 10px;
+	margin: 50px;
+}
+
+.retire_btn > .btn-primary {
+	border-color: #000;
+	margin: 10px;
+}
+
+.retire_btn > .btn-primary:hover {
+	background-color: #000080;
+}
+
+.retire_btn > .btn-danger {
+	background-color: #f00;
+	border-color: #000;
+	margin: 10px;
+}
+
+.retire_btn > .btn-danger:hover {
+	background-color: #660000;
+	border-color: #000;
+}
+/* retire */
 
 
 
