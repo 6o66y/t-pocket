@@ -69,21 +69,24 @@
 /* ユーザー名の設定 */
 .profile_username {
 	width: 190px;
+	height: 100%;
 	background-color: #fff;
 	text-align: center;
 	margin-bottom: 1px;
 	margin-top: 10px;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
+	word-break: break-all;
 }
 
 /* 自己紹介の設定 */
 .profile_introduction {
 	width: 190px;
-	height: 150px;
+	height: 100%;
 	background-color: #fff;
 	border-bottom-right-radius: 5px;
 	border-bottom-left-radius: 5px;
+	word-break: break-all;
 }
 /* profile */
 
@@ -201,6 +204,11 @@
 
 .users_index_name {
 	color: #fff;
+	width: 100px;
+    margin: 0 auto;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .u_index_btn > .btn-default {
@@ -213,6 +221,16 @@
 	background-color: #FAEBD7;
 	border-color: #000;
 	color: #990000;
+}
+
+/* 検索フォームの設定 */
+.users_search > .users_search_btn {
+	border-color: #EAD9FF;
+}
+
+.users_search > .users_search_btn:hover {
+	border-color: #EAD9FF;
+	color: #EAD9FF;
 }
 /* index */
 
@@ -228,6 +246,14 @@
 /* 表の設定 */
 .users_show_ {
 	color: #fff;
+}
+
+.users_show_title {
+    width: 150px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin: 0 auto;
 }
 /* show */
 
