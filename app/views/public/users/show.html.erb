@@ -1,32 +1,53 @@
-<div class="col-md-4">
-	<%= render 'public/users/profile', user: @user %>
-</div>
+<div class="users_show">
+	<div class="col-md-4">
+		<%= render 'public/users/profile', user: @user %>
+	</div>
 
-<div class="col-md-8">
-	<h2>Posts</h2>
+	<div class="col-md-8">
+		<h2>Posts</h2>
 
-	<table>
-		<thead>
-			<tr>
-				<th>Titles</th>
-				<th>Categories</th>
-				<th>Comments</th>
-				<th>Likes</th>
-			</tr>
-		</thead>
-
-		<tbody>
-			<% @user.posts.each do |user_post| %>
+		<table>
+			<thead>
 				<tr>
-					<td><%=link_to user_post.title, post_path(user_post) %></td>
-
-					<td><%#= user.post.category %></td>
-
-					<td><%#= user_post.commests.count %></td>
-					<td><%#= user_post.likes.count %></td>
+					<th class="text-center">Titles</th>
+					<th class="text-center">Categories</th>
+					<th class="text-center">Comments</th>
+					<th class="text-center">Likes</th>
 				</tr>
-			<% end %>
-		</tbody>
-	</table>
+			</thead>
+
+			<tbody class="text-center">
+				<% @user.posts.each do |user_post| %>
+					<tr>
+						<td>
+							<%=link_to post_path(user_post) do %>
+								<div class="users_show_">
+									<%= user_post.title %>
+								</div>
+							<% end %>
+						</td>
+
+							<!-- カテゴリー -->
+						<td>
+							<%=link_to post_path(user_post) do %>
+								<div class="users_show_">
+									<%= user_post.category.name %>
+								</div>
+							<% end %>
+						</td>
+							<!-- コメント件数 -->
+						<td>
+							<%=link_to post_path(user_post) do %>
+								<div class="users_show_">
+									<%= user_post.comments.count %> <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+								</div>
+							<% end %>
+						</td>
+						<td><%#= user_post.likes.count %></td>
+					</tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
 </div>
 

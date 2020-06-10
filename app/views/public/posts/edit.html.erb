@@ -28,11 +28,15 @@
 				<%= f.attachment_field :image %>
 			</div>
 
-			<%#= f.label :category %>
+			<div class="edit_category">
+				<%= f.collection_select :category_id, Category.where(is_displayed: true), :id, :name, include_blank: '-- カテゴリー選択 --' %>
+			</div>
 
-			<%= f.submit '変更を保存', class: 'btn edit_post_btn' %>
+			<div class="p_edit_btn">
+				<%= f.submit '変更を保存', class: 'btn edit_post_btn' %>
 
-			<%= link_to '削除', post_path(@post), method: :delete, type: 'button', data: {confirm: '本当に削除しますか？'}, class: 'btn edit_delete_btn' %>
+				<%= link_to '削除', post_path(@post), method: :delete, type: 'button', data: {confirm: '本当に削除しますか？'}, class: 'btn edit_delete_btn' %>
+			</div>
 		</div>
 	<% end %>
 </div>

@@ -22,6 +22,10 @@ body {
 	background-color: #005500;
 }
 
+a {
+	text-decoration: none;
+}
+
 
 /* navbar */
 .p_h_btn {
@@ -67,6 +71,10 @@ body {
 
 .navbar-default .navbar-toggle {
 	border-color: #000;
+}
+
+.navbar-default .navbar-toggle:hover {
+	background-color: #8B4513;
 }
 
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {

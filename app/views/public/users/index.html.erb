@@ -1,35 +1,39 @@
-<div class="col-md-4">
-	<%= render 'public/users/profile', user: current_user %>
-</div>
+<div class="users_index">
+	<div class="col-md-4">
+		<%= render 'public/users/profile', user: current_user %>
+	</div>
 
-<div class="col-md-8">
-	<h2>Users</h2>
+	<div class="col-md-8">
+		<h2>Users</h2>
 
-	<table>
-		<thead>
-			<tr>
-				<th>Users</th>
-				<th></th>
-				<th></th>
-			</tr>
-		</thead>
-
-		<tbody>
-			<!-- ユーザー 一覧 -->
-			<% @users.each do |user| %>
+		<table class="users_index_table">
+			<thead>
 				<tr>
-					<td>
-						<%= link_to user_path(user) do%>
-							<%= render 'public/users/profile_image', user: user %>
-						<% end %>
-					</td>
-					<td><%= link_to user_path(user) do%>
-							<%= user.username %>
-						<% end %>
-					</td>
-					<td><%= link_to 'following', posts_path, type: 'button', class: 'btn btn-default' %></td>
+					<th class="text-center">Users</th>
+					<th></th>
+					<th></th>
 				</tr>
-			<% end %>
-		</tbody>
-	</table>
+			</thead>
+
+			<tbody class="text-center">
+				<!-- ユーザー 一覧 -->
+				<% @users.each do |user| %>
+					<tr>
+						<td>
+							<%= link_to user_path(user) do%>
+								<%= render 'public/users/profile_image', user: user %>
+							<% end %>
+						</td>
+						<td><%= link_to user_path(user) do%>
+								<div class="users_index_name">
+									<%= user.username %>
+								</div>
+							<% end %>
+						</td>
+						<td class="u_index_btn"><%= link_to 'following', posts_path, type: 'button', class: 'btn btn-default' %></td>
+					</tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
 </div>
