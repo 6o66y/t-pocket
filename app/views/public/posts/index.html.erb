@@ -65,7 +65,13 @@
 							<% end %>
 						</td>
 							<!-- いいね数 -->
-						<td><%#= post.likes.cunt %></td>
+						<td>
+							<%= link_to post_path(post) do%>
+								<div class="posts_index_">
+									<span class="glyphicon glyphicon-star" aria-hidden="true"></span> <%= post.likes.count %>
+								</div>
+							<% end %>
+						</td>
 					</tr>
 				<% end %>
 			</tbody>

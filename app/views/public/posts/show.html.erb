@@ -15,44 +15,59 @@
 			</div>
 		</div>
 		<div class="row">
+			<!-- タイトル -->
 			<div class="post_title col-md-4">
-				<!-- タイトル -->
 				<%= simple_format(@post.title) %>
 			</div>
+			<!-- カテゴリー -->
 			<div class="post_category text-center col-md-3">
-				<!-- カテゴリー -->
 				<%= @post.category.name %>
 			</div>
-			<div class="post_datetime text-right col-md-4">
+			<!-- いいね -->
+			<div class="like text-center col-md-2">
+				<% if @post.liked_by?(current_user) %>
+					<%= link_to post_likes_path(@post), class: 'like_font', method: :delete do %>
+						<span class="glyphicon glyphicon-star" aria-hidden="true" style="color: white;"></span>
+						<%= @post.likes.count %>
+					<% end %>
+				<% else %>
+					<%= link_to post_likes_path(@post), class: 'like_font', method: :post do %>
+						<span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+						<%= @post.likes.count %>
+					<% end %>
+				<% end %>
+			</div>
+			<!-- 日時 -->
+			<div class="post_datetime test-right">
 				<%= @post.created_at.strftime("%Y-%m-%d %H:%M:%S") %>
 			</div>
 		</div>
 
 		<div class="row">
+			<!-- めあて -->
 			<div class="post_objective">
-				<!-- めあて -->
 				<%= simple_format(@post.objective) %>
 			</div>
 		</div>
 
 		<div class="row">
+			<!-- 詳細 -->
 			<div class="post_body">
-				<!-- 詳細 -->
 				<%= simple_format(@post.body) %>
 			</div>
 		</div>
 
 		<div class="row">
+			<!-- ふりかえり -->
 			<div class="post_review">
-				<!-- ふりかえり -->
 				<%= simple_format(@post.review) %>
 			</div>
 		</div>
 	</div>
 
 	<div class="col-md-5">
+		<!-- image -->
 		<div class="row text-center">
-			<!-- image -->
 			<%= attachment_image_tag(@post, :image, size: '400x300') %>
 		</div>
 
