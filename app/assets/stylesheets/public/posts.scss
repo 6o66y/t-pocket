@@ -143,11 +143,31 @@
 	color: #fff;
 }
 
-.users_show_category, .users_show_comments {
-	color: #fff;
+.posts_index_title {
+    width: 150px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin: 0 auto;
 }
-/* show */
 
+.posts_index_user {
+    width: 100px;
+    margin: 0 auto;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/* [index] 検索フォームの設定 */
+.posts_search > .posts_search_btn {
+	border-color: #EAD9FF;
+}
+
+.posts_search > .posts_search_btn:hover {
+	border-color: #EAD9FF;
+	color: #EAD9FF;
+}
 
 
 

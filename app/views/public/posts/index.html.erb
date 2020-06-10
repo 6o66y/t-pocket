@@ -9,10 +9,10 @@
 
 			<!-- 検索フォーム -->
 			<%= search_form_for @q do |f| %>
-				<div class="col-md-4">
+				<div class="col-md-10 text-right posts_search">
 					<%= f.search_field :title_or_category_name_cont, placeholder: 'タイトル or カテゴリー' %>
 
-					<%= f.submit '検索'%>
+					<%= f.submit '検索', class: 'posts_search_btn' %>
 				</div>
 			<% end %>
 		</div>
@@ -35,7 +35,7 @@
 							<!-- ユーザー -->
 							<%= link_to user_path(post.user) do%>
 								<%= render 'public/users/profile_image', user: post.user %><br>
-								<div class="posts_index_">
+								<div class="posts_index_ posts_index_user">
 									<%= post.user.username %>
 								</div>
 							<% end %>
@@ -43,7 +43,7 @@
 						<td>
 							<%= link_to post_path(post) do%>
 								<!-- 投稿　タイトル -->
-								<div class="posts_index_">
+								<div class="posts_index_ posts_index_title">
 									<%= post.title %>
 								</div>
 							<% end %>
