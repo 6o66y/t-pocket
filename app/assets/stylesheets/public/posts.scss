@@ -8,10 +8,15 @@
 	background-color: #990000;
 }
 
+.posts_index h2 {
+	color: #fff;
+}
+
 /* [投稿]タイトルの設定 */
 .post_title {
 	margin-bottom: 10px;
 	background-color: #fff;
+	border-radius: 5px;
 }
 
 /* [投稿]めあての設定 */
@@ -19,6 +24,7 @@
 	margin-bottom: 10px;
 	height: 80px;
 	background-color: #fff;
+	border-radius: 5px;
 }
 
 /* [投稿]詳細の設定 */
@@ -26,6 +32,7 @@
 	margin-bottom: 10px;
 	height: 500px;
 	background-color: #fff;
+	border-radius: 5px;
 }
 
 /* [投稿]ふりかえりの設定 */
@@ -33,11 +40,17 @@
 	margin-bottom: 10px;
 	height: 100px;
 	background-color: #fff;
+	border-radius: 5px;
 }
 
-/* カテゴリー選択の設定 */
-.new_category {
-	margin-top: 20px;
+/* 「投稿」ボタンの設定 */
+.new_post_btn > .new_btn {
+	border-color: #D9E5FF;
+}
+
+.new_post_btn > .new_btn:hover {
+	border-color: #D9E5FF;
+	color: #D9E5FF;
 }
 
 /* 「投稿を編集」ボタンの設定 */
@@ -72,15 +85,6 @@
 	color: #fff;
 }
 
-/* [show]カテゴリーの設定 */
-.post_category {
-	margin-left: 10px;
-	margin-top: 10px;
-	background-color: #FAEBD7;
-	color: #990000;
-	border-color: #990000;
-}
-
 /* [show]日付の設定 */
 .post_datetime {
 	color: #fff;
@@ -89,6 +93,10 @@
 }
 
 /* [edit] 「変更を保存」ボタンの設定 */
+.p_edit_btn > .edit_post_btn {
+	border-color: #D9E5FF;
+}
+
 .p_edit_btn > .edit_post_btn:hover {
 	border-color: #D9E5FF;
 	color: #D9E5FF;
@@ -108,8 +116,46 @@
 	color: #990000;
 }
 
+/* [show]カテゴリーの設定 */
+.post_category {
+	margin-left: 10px;
+	margin-top: 10px;
+	background-color: #FAEBD7;
+	color: #990000;
+	border-color: #990000;
+	border-radius: 10px;
+}
+
 /* [edit] カテゴリー選択の設定 */
 .edit_category {
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
+
+/* カテゴリー選択の設定 */
+.new_category {
+	margin-top: 20px;
+}
+
+
+/* [index] 表の設定 */
+.posts_index_ {
+	color: #fff;
+}
+
+.users_show_category, .users_show_comments {
+	color: #fff;
+}
+/* show */
+
+
+
+
+
+
+
+
+
+
+
+

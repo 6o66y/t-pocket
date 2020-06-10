@@ -1,6 +1,6 @@
 ActiveAdmin.register User do
 
-  permit_params :name, :username, :introduction, :profile_image, :is_deleted
+  permit_params :name, :username, :introduction, :profile_image, :is_deleted, :email
 
   index do
     column :id
@@ -8,6 +8,7 @@ ActiveAdmin.register User do
     column :username
     column :profile_image
     column :introduction
+    column :email
     column :is_deleted
     column :created_at
     column :updated_at

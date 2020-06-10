@@ -1,44 +1,63 @@
-<div class="col-md-4">
-	<%= render 'public/users/profile', user: current_user %>
-</div>
+<div class="posts_index">
+	<div class="col-md-4">
+		<%= render 'public/users/profile', user: current_user %>
+	</div>
 
-<div class="col-md-8">
-	<h2>Users</h2>
+	<div class="col-md-8">
+		<h2>Posts</h2>
 
-	<table>
-		<thead>
-			<tr>
-				<th>Users</th>
-				<th>Titles</th>
-				<th>Categories</th>
-				<th>Comments</th>
-				<th>Likes</th>
-			</tr>
-		</thead>
-
-		<tbody>
-			<% @posts.each do |post| %>
+		<table>
+			<thead>
 				<tr>
-					<td>
-						<!-- ユーザー -->
-						<%= link_to user_path(post.user) do%>
-							<%= render 'public/users/profile_image', user: post.user %><br>
-							<%= post.user.username %>
-						<% end %>
-					</td>
-					<td><%= link_to post_path(post) do%>
-							<!-- 投稿　タイトル -->
-							<%= post.title %>
-						<% end %>
-					</td>
-						<!-- カテゴリー -->
-					<td><%#= post.category %></td>
-						<!-- コメント件数 -->
-					<td><%#= post.comments.cunt %></td>
-						<!-- いいね数 -->
-					<td><%#= post.likes.cunt %></td>
+					<th class="text-center">Users</th>
+					<th class="text-center">Titles</th>
+					<th class="text-center">Categories</th>
+					<th class="text-center">Comments</th>
+					<th class="text-center">Likes</th>
 				</tr>
-			<% end %>
-		</tbody>
-	</table>
+			</thead>
+
+			<tbody  class="text-center">
+				<% @posts.each do |post| %>
+					<tr>
+						<td>
+							<!-- ユーザー -->
+							<%= link_to user_path(post.user) do%>
+								<%= render 'public/users/profile_image', user: post.user %><br>
+								<div class="posts_index_">
+									<%= post.user.username %>
+								</div>
+							<% end %>
+						</td>
+						<td>
+							<%= link_to post_path(post) do%>
+								<!-- 投稿　タイトル -->
+								<div class="posts_index_">
+									<%= post.title %>
+								</div>
+							<% end %>
+						</td>
+							<!-- カテゴリー -->
+						<td>
+							<%= link_to post_path(post) do%>
+								<div class="posts_index_">
+									<%= post.category.name %>
+								</div>
+							<% end %>
+						</td>
+							<!-- コメント件数 -->
+						<td>
+							<%= link_to post_path(post) do%>
+								<div class="posts_index_">
+									<%= post.comments.count %> <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+								</div>
+							<% end %>
+						</td>
+							<!-- いいね数 -->
+						<td><%#= post.likes.cunt %></td>
+					</tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
 </div>

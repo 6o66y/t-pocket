@@ -4,6 +4,11 @@
 
 
 /* profile */
+/* アイコン */
+.profile_image {
+	border-radius: 100%;
+}
+
 /* 「Following」ボタンの設定 */
 .following_btn > .btn-default {
 	background-color: #990000;
@@ -67,6 +72,9 @@
 	background-color: #fff;
 	text-align: center;
 	margin-bottom: 1px;
+	margin-top: 10px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
 }
 
 /* 自己紹介の設定 */
@@ -74,6 +82,8 @@
 	width: 190px;
 	height: 150px;
 	background-color: #fff;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
 }
 /* profile */
 
@@ -185,6 +195,14 @@
 
 
 /* index */
+.users_index h2 {
+	color: #fff;
+}
+
+.users_index_name {
+	color: #fff;
+}
+
 .u_index_btn > .btn-default {
 	background-color: #990000;
 	border-color: #000;
@@ -198,6 +216,20 @@
 }
 /* index */
 
+
+
+
+/* show */
+/* 見出しの設定 */
+.users_show h2 {
+	color: #fff;
+}
+
+/* 表の設定 */
+.users_show_ {
+	color: #fff;
+}
+/* show */
 
 
 
