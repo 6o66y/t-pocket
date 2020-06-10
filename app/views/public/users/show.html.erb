@@ -43,7 +43,13 @@
 								</div>
 							<% end %>
 						</td>
-						<td><%#= user_post.likes.count %></td>
+						<td>
+							<%= link_to post_path(user_post) do%>
+								<div class="posts_index_">
+									<span class="glyphicon glyphicon-star" aria-hidden="true"></span> <%= user_post.likes.count %>
+								</div>
+							<% end %>
+						</td>
 					</tr>
 				<% end %>
 			</tbody>
