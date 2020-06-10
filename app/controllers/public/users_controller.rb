@@ -2,6 +2,9 @@ class Public::UsersController < ApplicationController
 
   def index
     @users = User.all
+    # ransack
+    @q = User.search(params[:q])
+    @users = @q.result(distinct: true)
   end
 
   def show

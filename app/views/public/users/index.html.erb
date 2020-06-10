@@ -4,7 +4,18 @@
 	</div>
 
 	<div class="col-md-8">
-		<h2>Users</h2>
+		<div class="row">
+			<h2 class="col-md-2">Users</h2>
+
+			<!-- 検索フォーム -->
+			<%= search_form_for @q do |f| %>
+				<div class="col-md-4">
+					<%= f.search_field :username_cont, placeholder: 'ユーザー名' %>
+
+					<%= f.submit '検索'%>
+				</div>
+			<% end %>
+		</div>
 
 		<table class="users_index_table">
 			<thead>
