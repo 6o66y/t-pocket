@@ -110,10 +110,12 @@
 
 							<td class="text-left"><%= comment.post_comment %></td>
 
-							<td class="s_comment_btn"><%= link_to '編集',edit_post_comment_path(comment), class: 'btn comment_btn' %>
+							<% if comment.user == current_user %>
+								<td class="s_comment_btn"><%= link_to '編集',edit_post_comment_path(comment), class: 'btn comment_btn' %>
 
-								<%= link_to '削除', post_comment_path(comment), method: :delete, data: {confirm: '本当に削除しますか？'}, class: 'btn comment_delete_btn' %>
-							</td>
+									<%= link_to '削除', post_comment_path(comment), method: :delete, data: {confirm: '本当に削除しますか？'}, class: 'btn comment_delete_btn' %>
+								</td>
+							<% end %>
 						</tr>
 					<% end %>
 				</tbody>
