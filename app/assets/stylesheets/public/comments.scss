@@ -46,9 +46,9 @@
 	margin-left: 10px;
 }
 
-.comment_btn:hover {
+.s_comment_btn > .comment_btn:hover {
 	background-color: #FAEBD7;
-	border-color: #000;
+	border-color: #990000;
 	color: #990000;
 }
 
@@ -60,10 +60,10 @@
 	margin-left: 10px;
 }
 
-.comment_delete_btn:hover {
+.s_comment_btn > .comment_delete_btn:hover {
 	background-color: #FAEBD7;
-	border-color: #000;
-	color: #fff;
+	border-color: #990000;
+	color: #990000;
 	margin-left: 10px;
 }
 
