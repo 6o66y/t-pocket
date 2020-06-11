@@ -16,38 +16,7 @@
 				</div>
 			<% end %>
 		</div>
-
-		<table class="users_index_table col-md-6">
-			<thead>
-				<tr>
-					<th class="text-center">Users</th>
-					<th class="text-center"></th>
-					<th class="text-center"></th>
-				</tr>
-			</thead>
-
-			<tbody class="text-center">
-				<!-- ユーザー 一覧 -->
-				<% @users.each do |user| %>
-					<tr>
-						<td>
-							<%= link_to user_path(user) do%>
-								<%= render 'public/users/profile_image', user: user %>
-							<% end %>
-						</td>
-						<td><%= link_to user_path(user) do%>
-								<div class="users_index_name">
-									<%= user.username %>
-								</div>
-							<% end %>
-						</td>
-						<td>
-							<!-- フォローボタン -->
-							<%= render 'public/relationships/follow_button', user: user %>
-						</td>
-					</tr>
-				<% end %>
-			</tbody>
-		</table>
+		<!-- ユーザー 一覧 -->
+		<%= render 'public/users/index', users: @users %>
 	</div>
 </div>
