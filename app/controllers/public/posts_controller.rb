@@ -1,5 +1,7 @@
 class Public::PostsController < ApplicationController
 
+  before_action :authenticate_user!
+
   def new
     @post = Post.new
   end
@@ -10,7 +12,7 @@ class Public::PostsController < ApplicationController
     if @post.save
       redirect_to post_path(@post)
     else
-      render :index
+      render :new
     end
   end
 
