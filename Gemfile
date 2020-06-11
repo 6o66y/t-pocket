@@ -78,3 +78,5 @@ gem 'pry-byebug'
 gem 'ransack'
 
 gem 'rubocop', require: false
+
+gem 'kaminari','~> 1.2.1'

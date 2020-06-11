@@ -1,14 +1,15 @@
 class Public::UsersController < ApplicationController
 
   def index
-    @users = User.all
+    @users = User.page(params[:page]).reverse_order
     # ransack
     @q = User.search(params[:q])
-    @users = @q.result(distinct: true)
+    @users = @q.result(distinct: true).page(params[:page]).reverse_order
   end
 
   def show
     @user = User.find(params[:id])
+    @user_posts = @user.posts.page(params[:page]).reverse_order
   end
 
   def edit
