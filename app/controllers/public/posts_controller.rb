@@ -24,7 +24,7 @@ class Public::PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @comment = Comment.new
-    @comments = @post.comments
+    @comments = @post.comments.page(params[:page]).reverse_order
   end
 
   def edit
