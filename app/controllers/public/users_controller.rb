@@ -20,7 +20,7 @@ class Public::UsersController < ApplicationController
     if @user.update(user_params)
       redirect_to user_path(@user)
     else
-      render 'edit'
+      render :edit
     end
   end
 

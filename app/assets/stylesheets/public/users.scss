@@ -14,9 +14,7 @@
 	background-color: #990000;
 	border-color: #000;
 	color: #fff;
-	margin-top: 20px;
-	margin-right: 30px;
-	margin-left: 3px;
+	margin: 20px 30px 20px 3px;
 }
 
 .following_btn > .btn-default:hover {
@@ -31,6 +29,7 @@
 	border-color: #990000;
 	color: #990000;
 	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 .follower_btn > .btn-default:hover {
@@ -39,12 +38,36 @@
 	color: #990000;
 }
 
+/* 「Follow」&「Following」ボタンの設定 */
+.unfollow_btn > .btn-default {
+	border-color: #fff;
+	color: #fff;
+	margin-top: 10px;
+	margin-left: 50px;
+}
+
+.unfollow_btn > .btn-default:hover {
+	border-color: #EEE8AA;
+	color: #EEE8AA;
+}
+
+.follow_btn > .btn-default {
+	border-color: #EEE8AA;
+	color: #EEE8AA;
+	margin-top: 10px;
+	margin-left: 55px;
+}
+
+.follow_btn > .btn-default:hover {
+	border-color: #fff;
+	color: #fff;
+}
+
 /* 「Edit」ボタンの設定 */
 .edit_btn > .btn-default {
 	background-color: #CC6600;
 	border-color: #000;
 	color: #fff;
-	margin: 5px auto;
 }
 
 .edit_btn > .btn-default:hover {
@@ -56,13 +79,14 @@
 /* 「New」ボタンの設定 */
 .new_btn > .btn-default {
 	background-color: #660000;
-	border-color: #000;
+	border-color: #fff;
 	color: #fff;
+	margin-top: 20px;
 }
 
 .new_btn > .btn-default:hover {
 	background-color: #FAEBD7;
-	border-color: #000;
+	border-color: #fff;
 	color: #990000;
 }
 
@@ -97,8 +121,8 @@
 /* 見出しの設定 */
 .user_edit h2 {
 	color: #fff;
-	background-color: #990000;
 	margin-bottom: 50px;
+	border-bottom: 1px solid #fff;
 }
 
 /* 「変更を保存」ボタンの設定 */
@@ -211,18 +235,6 @@
 	text-overflow: ellipsis;
 }
 
-.u_index_btn > .btn-default {
-	background-color: #990000;
-	border-color: #000;
-	color: #fff;
-}
-
-.u_index_btn > .btn-default:hover {
-	background-color: #FAEBD7;
-	border-color: #000;
-	color: #990000;
-}
-
 /* 検索フォームの設定 */
 .users_search > .users_search_btn {
 	border-color: #EAD9FF;
@@ -231,6 +243,12 @@
 .users_search > .users_search_btn:hover {
 	border-color: #EAD9FF;
 	color: #EAD9FF;
+}
+
+/* 表の設定 */
+.users_index_table td {
+	padding-top: 10px;
+	border-bottom: 1px solid #fff;
 }
 /* index */
 
@@ -246,6 +264,11 @@
 /* 表の設定 */
 .users_show_ {
 	color: #fff;
+}
+
+.users_show_table td {
+	padding-top: 10px;
+	border-bottom: 1px solid #fff;
 }
 
 .users_show_title {
