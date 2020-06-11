@@ -21,8 +21,8 @@
 			<thead>
 				<tr>
 					<th class="text-center">Users</th>
-					<th></th>
-					<th></th>
+					<th class="text-center"></th>
+					<th class="text-center"></th>
 				</tr>
 			</thead>
 
@@ -41,7 +41,10 @@
 								</div>
 							<% end %>
 						</td>
-						<td class="u_index_btn"><%= link_to 'following', posts_path, type: 'button', class: 'btn btn-default' %></td>
+						<td>
+							<!-- フォローボタン -->
+							<%= render 'public/relationships/follow_button', user: user %>
+						</td>
 					</tr>
 				<% end %>
 			</tbody>
