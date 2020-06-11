@@ -121,7 +121,7 @@
 	margin-top: 10px;
 	background-color: #FAEBD7;
 	color: #990000;
-	border-color: #990000;
+	border: 1px solid #990000;
 	border-radius: 10px;
 }
 
@@ -140,6 +140,11 @@
 /* [index] 表の設定 */
 .posts_index_ {
 	color: #fff;
+}
+
+.posts_index_table td {
+	padding-top: 10px;
+	border-bottom: 1px solid #fff;
 }
 
 .posts_index_title {
@@ -175,7 +180,7 @@
 	margin-top: 10px;
 	background-color: #440000;
 	color: #FAEBD7;
-	border-color: #440000;
+	border: 1px solid #fff;
 	border-radius: 10px;
 }
 
