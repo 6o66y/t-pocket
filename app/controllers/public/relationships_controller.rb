@@ -1,5 +1,7 @@
 class Public::RelationshipsController < ApplicationController
 
+  before_action :authenticate_user!
+
   def followings
   	@user = User.find(params[:id])
   	@users = @user.followings.page(params[:page]).reverse_order
