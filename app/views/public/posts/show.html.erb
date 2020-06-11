@@ -72,7 +72,10 @@
 		</div>
 
 		<div class="row text-left s_post_btn">
-			<%= link_to '投稿を編集', edit_post_path(@post), class: 'btn post_btn' %>
+			<!-- 「投稿を編集」ボタン -->
+			<% if @post.user == current_user %>
+				<%= link_to '投稿を編集', edit_post_path(@post), class: 'btn post_btn' %>
+			<% end %>
 		</div>
 
 		<div class="row text-center">
