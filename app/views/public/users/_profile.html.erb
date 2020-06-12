@@ -16,7 +16,7 @@
 </div>
 
 <div class="row">
-	<% if user == current_user %>
+	<% if user ||= current_user %>
 		<div class="following_btn">
 			<%= link_to 'Following', followings_path(user), type: 'button', class: 'btn btn-default btn-sm col-md-2' %>
 		</div>
