@@ -16,6 +16,9 @@ Rails.application.routes.draw do
 
     get 'posts/timelines' => 'timelines#timeline', as: 'timeline'
 
+    get 'users/edit_password/:id' => 'users#edit_password', as: 'edit_password'
+    patch 'users/update_password/:id' => 'users#update_password', as: 'update_password'
+
   	resources :posts, only: [:new, :create, :index, :show, :edit, :update, :destroy] do
       resources :comments, only: [:create, :edit, :update, :destroy]
       resource :likes, only: [:create, :destroy]
