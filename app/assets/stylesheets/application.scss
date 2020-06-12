@@ -91,6 +91,9 @@ a {
 /* navbar */
 
 
+
+
+/* サインイン・サインアップ 設定 */
 /* password */
 .devise {
 	background-color: #99CC99;
@@ -129,12 +132,6 @@ a {
 	padding-bottom: 10px;
 }
 
-.sigh_up_btn {
-	background-color: #FFFF33;
-	border-color: #000;
-	color: #FF0000;
-}
-
 .sigh_up_btn:hover {
 	background-color: #FFFF33;
 	border-color: #000;
@@ -160,12 +157,6 @@ a {
 
 .sign_in_table td {
 	padding-bottom: 10px;
-}
-
-.sigh_in_btn {
-	background-color: #FFFF33;
-	border-color: #000;
-	color: #FF0000;
 }
 
 .sigh_in_btn:hover {

@@ -283,5 +283,36 @@
 
 
 
+/* change_password */
+/* 見出しの設定 */
+.change_password h2 {
+	color: #fff;
+	margin-bottom: 50px;
+}
+
+/* labelの設定 */
+.change_password label {
+	color: #fff;
+}
+
+/* 表の設定 */
+.change_password table {
+	margin-bottom: 30px;
+}
+
+.change_password_table td {
+	padding-bottom: 10px;
+}
+
+/* ボタンの設定 */
+.change_password_ > .change_password_btn:hover {
+	background-color: #FFFF33;
+	border-color: #000;
+	color: #FF0000;
+}
+/* change_password */
+
+
+
 
 
