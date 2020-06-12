@@ -17,65 +17,9 @@
 			<% end %>
 		</div>
 
-		<table class="posts_index_table">
-			<thead>
-				<tr>
-					<th class="text-center">Users</th>
-					<th class="text-center">Titles</th>
-					<th class="text-center">Categories</th>
-					<th class="text-center">Comments</th>
-					<th class="text-center">Likes</th>
-				</tr>
-			</thead>
-
-			<tbody  class="text-center">
-				<% @posts.each do |post| %>
-					<tr>
-						<td>
-							<!-- ユーザー -->
-							<%= link_to user_path(post.user) do%>
-								<%= render 'public/users/profile_image', user: post.user %><br>
-								<div class="posts_index_ posts_index_user">
-									<%= post.user.username %>
-								</div>
-							<% end %>
-						</td>
-						<td>
-							<%= link_to post_path(post) do%>
-								<!-- 投稿　タイトル -->
-								<div class="posts_index_ posts_index_title">
-									<%= post.title %>
-								</div>
-							<% end %>
-						</td>
-							<!-- カテゴリー -->
-						<td>
-							<%= link_to post_path(post) do%>
-								<div class="posts_index_">
-									<%= post.category.name %>
-								</div>
-							<% end %>
-						</td>
-							<!-- コメント件数 -->
-						<td>
-							<%= link_to post_path(post) do%>
-								<div class="posts_index_">
-									<%= post.comments.count %> <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
-								</div>
-							<% end %>
-						</td>
-							<!-- いいね数 -->
-						<td>
-							<%= link_to post_path(post) do%>
-								<div class="posts_index_">
-									<span class="glyphicon glyphicon-star" aria-hidden="true"></span> <%= post.likes.count %>
-								</div>
-							<% end %>
-						</td>
-					</tr>
-				<% end %>
-			</tbody>
-		</table>
-		<%= paginate @posts %>
+		<div>
+			<!-- 投稿一覧 -->
+			<%= render 'public/posts/index', posts: @posts %>
+		</div>
 	</div>
 </div>
