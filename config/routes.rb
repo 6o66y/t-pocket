@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   	get 'users/:id/following' => 'relationships#following', as: 'following'
   	get 'users/:id/followers' => 'relationships#followers', as: 'followers'
 
+    get 'posts/timelines' => 'timelines#timeline', as: 'timeline'
+
   	resources :posts, only: [:new, :create, :index, :show, :edit, :update, :destroy] do
       resources :comments, only: [:create, :edit, :update, :destroy]
       resource :likes, only: [:create, :destroy]
