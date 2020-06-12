@@ -5,6 +5,14 @@
 
 	<div class="col-md-8">
 		<div class="row">
+			<% if user ||= current_user %>
+				<div class="col-md-2 text-center">
+					<%= link_to user_path(@user) do%>
+						<%= render 'public/users/profile_image', user: @user %>
+						<h5><%= @user.username %></h5>
+					<% end %>
+				</div>
+			<% end %>
 			<h2 class="col-md-2">Followers</h2>
 		</div>
 		<div class="row">
