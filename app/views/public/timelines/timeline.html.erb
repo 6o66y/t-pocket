@@ -1,14 +1,13 @@
-<div class="follow">
+<div class="posts_index">
 	<div class="col-md-4">
 		<%= render 'public/users/profile', user: current_user %>
 	</div>
 
 	<div class="col-md-8">
 		<div class="row">
-			<h2 class="col-md-2">Followings</h2>
-		</div>
-		<div class="row">
-			<%= render 'public/users/index', users: @users %>
+			<h2 class="col-md-2">Timeline</h2>
+			<!-- 投稿一覧 -->
+			<%= render 'public/posts/index', posts: @posts %>
 		</div>
 	</div>
 </div>

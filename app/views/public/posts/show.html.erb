@@ -7,7 +7,7 @@
 		<div class="row p_s_user">
 			<div class="post_show_user text-center">
 				<%= link_to user_path(@post.user) do%>
-					<%= render 'public/users/profile_image', user: @post.user %><br>
+					<%= render 'public/users/profile_image', user: @post.user %>
 					<div class="show_username">
 						<%= @post.user.username %>
 					</div>
