@@ -17,9 +17,10 @@
 	margin-bottom: 10px;
 	background-color: #fff;
 	border-radius: 5px;
+	height: 100%;
 }
 
-/* [投稿]めあての設定 */
+/* [new & edit]めあての設定 */
 .post_objective {
 	margin-bottom: 10px;
 	height: 80px;
@@ -27,7 +28,15 @@
 	border-radius: 5px;
 }
 
-/* [投稿]詳細の設定 */
+/* [show]めあての設定 */
+.post_objective_ {
+	margin-bottom: 10px;
+	height: 100%;
+	background-color: #FFEEFF;
+	border-radius: 5px;
+}
+
+/* [new & edit]詳細の設定 */
 .post_body {
 	margin-bottom: 10px;
 	height: 500px;
@@ -35,10 +44,26 @@
 	border-radius: 5px;
 }
 
-/* [投稿]ふりかえりの設定 */
+/* [show]詳細の設定 */
+.post_body_ {
+	margin-bottom: 10px;
+	height: 100%;
+	background-color: #E0FFFF;
+	border-radius: 5px;
+}
+
+/* [new & edit]ふりかえりの設定 */
 .post_review {
 	margin-bottom: 10px;
 	height: 100px;
+	background-color: #F0FFF0;
+	border-radius: 5px;
+}
+
+/* [show]ふりかえりの設定 */
+.post_review_ {
+	margin-bottom: 10px;
+	height: 100%;
 	background-color: #F0FFF0;
 	border-radius: 5px;
 }
