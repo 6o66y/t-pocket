@@ -18,7 +18,7 @@ class User < ApplicationRecord
   # フォロー機能
   # フォローユーザーを取得
   has_many :relationships
-  has_many :followings, through: :relationships, source: :follow
+  has_many :following, through: :relationships, source: :follow
 
   # フォロワーを取得
   has_many :reverse_of_relationships, class_name: 'Relationship', foreign_key: 'follow_id' # follow_idを入口にrelaitonshipsテーブルにアクセス
@@ -37,6 +37,6 @@ class User < ApplicationRecord
   end
 
   def following?(other_user) # フォローしていればtrueを返す
-    self.followings.include?(other_user)
+    self.following.include?(other_user)
   end
 end
