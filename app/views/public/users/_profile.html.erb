@@ -1,5 +1,7 @@
 <div class="row">
+	<%= link_to user_path(user) do%>
 	<%= attachment_image_tag(user, :profile_image, fallback: 'no_image.jpg', size: '190x190') %>
+	<% end %>
 </div>
 
 <div class="row profile_username">
