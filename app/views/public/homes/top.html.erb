@@ -2,6 +2,20 @@
 	<div class="col-md-4">
 		<% if user_signed_in? %>
 			<%= render 'public/users/profile', user: current_user %>
+		<% else %>
 		<% end %>
+	</div>
+
+	<div class="col-md-8">
+		<div id="container">
+			<div id="theTarget">
+				<div class="image1"></div>
+				<div class="image2"></div>
+				<div class="image3"></div>
+				<div class="image4"></div>
+				<div class="image5"></div>
+				<div class="image6"></div>
+			</div>
+		</div>
 	</div>
 </div>
