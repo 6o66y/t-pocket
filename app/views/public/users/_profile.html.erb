@@ -1,14 +1,14 @@
-<div class="row">
+<div class="row text-center">
 	<%= link_to user_path(user) do%>
 		<%= attachment_image_tag(user, :profile_image, fallback: 'no_image.jpg', size: '190x190') %>
 	<% end %>
 </div>
 
-<div class="row profile_username">
+<div class="row profile_username center-block">
 	<%= user.username %>
 </div>
 
-<div class="row profile_introduction">
+<div class="row profile_introduction center-block">
 	<%= user.introduction %>
 </div>
 
@@ -20,22 +20,22 @@
 <div class="row">
 	<% if user ||= current_user %>
 		<div class="following_btn">
-			<%= link_to 'Following', following_path(user), type: 'button', class: 'btn btn-default btn-sm col-md-2' %>
+			<%= link_to 'Following', following_path(user), type: 'button', class: 'btn btn-default btn-sm col-md-5' %>
 		</div>
 		<div class="follower_btn">
-			<%= link_to 'Followers', followers_path(user), type: 'button', class: 'btn btn-default btn-sm col-md-2' %>
+			<%= link_to 'Followers', followers_path(user), type: 'button', class: 'btn btn-default btn-sm col-md-5' %>
 		</div>
 	<% end %>
 </div>
 
 
-<div class="row edit_btn">
+<div class="row edit_btn center-block">
 	<% if user == current_user %>
-		<%= link_to 'Edit',edit_user_path(user), type: 'button', class: 'col-md-5 btn btn-default' %>
+		<%= link_to 'Edit',edit_user_path(user), type: 'button', class: 'btn btn-default col-md-11' %>
 	<% end %>
 </div>
 
-<div class="row new_btn">
-	<%= link_to 'New',new_post_path, type: 'button', class: 'col-md-5 btn btn-default' %>
+<div class="row new_btn center-block">
+	<%= link_to 'New',new_post_path, type: 'button', class: 'btn btn-default col-md-11' %>
 </div>
 
