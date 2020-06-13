@@ -94,22 +94,6 @@
 	</div>
 
 	<div class="col-md-2">
-		<div class="top_category">
-			<table>
-				<thead>
-					<tr>
-						<th class="text-center">Categories</th>
-					</tr>
-				</thead>
-
-				<tbody class="text-center">
-					<% @categories.each do |category| %>
-					<tr>
-						<td><%= category.name %></td>
-					</tr>
-					<% end %>
-				</tbody>
-			</table>
-		</div>
+		<%= render 'public/categories/category', categories: @categories %>
 	</div>
 </div>

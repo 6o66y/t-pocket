@@ -21,6 +21,7 @@ class Public::PostsController < ApplicationController
     # ransack
     @q = Post.search(params[:q])
     @posts = @q.result(distinct: true).page(params[:page]).reverse_order
+    @categories = Category.all
   end
 
   def show
