@@ -14,7 +14,8 @@
 	background-color: #990000;
 	border-color: #000;
 	color: #fff;
-	margin: 20px 30px 20px 3px;
+	margin-top: 20px;
+	margin-left: 10px;
 }
 
 .following_btn > .btn-default:hover {
@@ -29,6 +30,7 @@
 	border-color: #990000;
 	color: #990000;
 	margin-top: 20px;
+	margin-left: 10px;
 	margin-bottom: 20px;
 }
 
@@ -92,7 +94,7 @@
 
 /* ユーザー名の設定 */
 .profile_username {
-	width: 190px;
+	width: 100%;
 	height: 100%;
 	background-color: #fff;
 	text-align: center;
@@ -105,7 +107,7 @@
 
 /* 自己紹介の設定 */
 .profile_introduction {
-	width: 190px;
+	width: 100%;
 	height: 100%;
 	background-color: #fff;
 	border-bottom-right-radius: 5px;
