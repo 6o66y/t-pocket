@@ -3,11 +3,12 @@
 		<%= render 'public/users/profile', user: current_user %>
 	</div>
 
-	<div class="col-md-8">
+	<div class="col-md-6">
 		<div class="row">
-			<h2 class="col-md-2">Timeline</h2>
-			<!-- 投稿一覧 -->
-			<%= render 'public/posts/index', posts: @posts %>
+			<h2 class="col-md-4 text-center">Timeline</h2>
 		</div>
+
+		<!-- 投稿一覧 -->
+		<%= render 'public/posts/index', posts: @posts %>
 	</div>
 </div>

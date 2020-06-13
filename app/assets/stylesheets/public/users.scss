@@ -45,7 +45,7 @@
 	border-color: #fff;
 	color: #fff;
 	margin-top: 10px;
-	margin-left: 50px;
+	margin-left: 10px;
 }
 
 .unfollow_btn > .btn-default:hover {
@@ -57,7 +57,7 @@
 	border-color: #EEE8AA;
 	color: #EEE8AA;
 	margin-top: 10px;
-	margin-left: 55px;
+	margin-left: 10px;
 }
 
 .follow_btn > .btn-default:hover {
@@ -248,6 +248,10 @@
 }
 
 /* 表の設定 */
+.users_index_table {
+	margin-left:  50px;
+}
+
 .users_index_table td {
 	padding-top: 10px;
 	border-bottom: 1px solid #fff;
@@ -266,6 +270,10 @@
 /* 表の設定 */
 .users_show_ {
 	color: #fff;
+}
+
+.users_show_table {
+	margin-left:  50px;
 }
 
 .users_show_table td {

@@ -78,7 +78,7 @@
 			<% end %>
 		</div>
 
-		<div class="row text-center">
+		<div class="row">
 			<!-- コメントフォーム -->
 			<div class="comment_form">
 				<%= form_with(model: [@post, @comment], local: true) do |f| %>
@@ -88,21 +88,25 @@
 					</div>
 				<% end %>
 			</div>
+		</div>
 
+		<div class="row">
 			<!-- コメント一覧 -->
-			<table class="table comment_table col-md-12">
+			<table class="table comment_table">
 				<thead>
 					<tr>
 						<th class="text-center">Users</th>
-						<th class="text-center">comments</th>
-						<th class="text-center"><%= @post.comments.count %> <span class="glyphicon glyphicon-comment" aria-hidden="true"></span></th>
+						<th class="">
+							comments　( <%= @post.comments.count %> <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> )
+						</th>
+						<th class=""></th>
 					</tr>
 				</thead>
 
 				<tbody>
 					<% @comments.each do |comment| %>
 						<tr>
-							<td>
+							<td class="text-center">
 								<%= link_to user_path(comment.user) do%>
 									<%= render 'public/users/profile_image', user: comment.user %><br>
 									<div class="show_username">
@@ -111,7 +115,8 @@
 								<% end %>
 							</td>
 
-							<td class="text-left"><%= comment.post_comment %></td>
+							<td class="text-left post_comment">
+								<%= simple_format(comment.post_comment) %></td>
 
 							<% if comment.user == current_user %>
 								<td class="s_comment_btn"><%= link_to '編集',edit_post_comment_path(comment), class: 'btn comment_btn' %>
