@@ -1,0 +1,40 @@
+// Place all the styles related to the public::to_do_lists controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/* 「追加」ボタンの設定 */
+.to_do_list_submit > .to_do_submit {
+	border-color: #D9E5FF;
+	margin-top: 10px;
+	margin-bottom: 50px;
+}
+
+.to_do_list_submit > .to_do_submit:hover {
+	border-color: #D9E5FF;
+	color: #D9E5FF;
+}
+
+/* 表の設定 */
+.to_do_list {
+	background-color: #fff;
+	border-radius: 3px;
+}
+
+.to_do_list th {
+	background-color: #FFFF00;
+	border-radius: 3px;
+}
+
+/* 「削除」ボタンの設定 */
+.to_do_list_delete_ > .to_do_list_delete_btn {
+	background-color: #FF6928;
+	border-color: #990000;
+	color: #fff;
+}
+
+.to_do_list_delete_ > .to_do_list_delete_btn:hover {
+	background-color: #00CC00;
+	border-color: #0000CC;
+	color: #fff;
+}
