@@ -41,9 +41,30 @@
 
 .top h2 {
 	margin-top: 50px;
+	margin-bottom: 50px;
 	margin-left: 200px;
 	display: inline-block;
 	border: 3px solid #FF66CC;
+}
+
+.top_category tbody, .recommend_posts tbody {
+	background-color: #fff;
+}
+
+.top_category td, .recommend_posts td {
+	padding: 10px;
+	font-size: 15px;
+	border-bottom: 1px solid #005500;
+}
+
+.recommend_posts_title {
+	color: #fff;
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 
