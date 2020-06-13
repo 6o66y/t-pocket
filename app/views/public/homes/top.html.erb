@@ -3,19 +3,113 @@
 		<% if user_signed_in? %>
 			<%= render 'public/users/profile', user: current_user %>
 		<% else %>
+			<div id="container">
+				<div id="theTarget">
+					<div class="image1"></div>
+					<div class="image2"></div>
+					<div class="image3"></div>
+					<div class="image4"></div>
+					<div class="image5"></div>
+					<div class="image6"></div>
+				</div>
+			</div>
 		<% end %>
 	</div>
 
-	<div class="col-md-10">
-		<div id="container">
-			<div id="theTarget">
-				<div class="image1"></div>
-				<div class="image2"></div>
-				<div class="image3"></div>
-				<div class="image4"></div>
-				<div class="image5"></div>
-				<div class="image6"></div>
+	<div class="col-md-8">
+		<div class="row">
+			<h1><strong>「せんせいのぽけっと」って？</strong></h1>
+
+			<h3><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>教材や授業のヒントを探したり、自分の実践例を投稿したりできるサイト</h3>
+		</div>
+
+		<div class="row blackboard_up">
+			<div class="col-md-5">
+				<h4>知りたい、改善したい</h4><br>
+				<p>・かけ算の学習で使えるいい教材を知りたい</p>
+				<p>・ごんぎつねの授業展開を改善したい</p>
 			</div>
+			<div class="col-md-7">
+				<h5><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>キーワード検索で、授業のヒントを集めよう</h5>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-5">
+				<h4>授業や教材を投稿</h4>
+				<p>・こんな授業展開ってどうかな？</p>
+				<p>・いい教材を思いついた!</p>
+			</div>
+			<div class="col-md-7">
+				<h5>
+					<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>投稿して、アドバイスをもらう<br>
+					<span class="glyphicon glyphicon-arrow-right top_arrow_h5" aria-hidden="true"></span>いい教材を共有する
+				</h5>
+			</div>
+		</div>
+
+		<div class="row">
+			<%= link_to posts_path do%>
+				<h2>さぁ、たくさんのヒントをあつめよう！</h2>
+			<% end %>
+		</div>
+
+		<div class="row">
+			<% if user_signed_in? %>
+				<div class="recommend_posts">
+					<% @recommend_posts.each do |recommend_post| %>
+					<div class="col-md-1">
+						<%= link_to post_path(recommend_post) do%>
+							<%= render 'public/users/profile_image', user: recommend_post.user %>
+						<% end %>
+					</div>
+					<div class="col-md-3">
+						<%= link_to post_path(recommend_post) do%>
+							<div class="recommend_posts_title">
+								<%= recommend_post.title %>
+							</div>
+						<% end %>
+					</div>
+					<% end %>
+				</div>
+			<% else %>
+				<div class="recommend_posts">
+					<% @recommend_posts.each do |recommend_post| %>
+					<div class="col-md-1">
+						<%= link_to posts_path do%>
+							<%= render 'public/users/profile_image', user: recommend_post.user %>
+						<% end %>
+					</div>
+					<div class="col-md-3">
+						<%= link_to posts_path do%>
+							<div class="recommend_posts_title">
+								<%= recommend_post.title %>
+							</div>
+						<% end %>
+					</div>
+					<% end %>
+				</div>
+			<% end %>
+		</div>
+	</div>
+
+	<div class="col-md-2">
+		<div class="top_category">
+			<table>
+				<thead>
+					<tr>
+						<th class="text-center">Categories</th>
+					</tr>
+				</thead>
+
+				<tbody class="text-center">
+					<% @categories.each do |category| %>
+					<tr>
+						<td><%= category.name %></td>
+					</tr>
+					<% end %>
+				</tbody>
+			</table>
 		</div>
 	</div>
 </div>
