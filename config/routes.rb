@@ -24,7 +24,9 @@ Rails.application.routes.draw do
       resource :likes, only: [:create, :destroy]
     end
   	resources :relationships, only: [:create, :destroy]
-  	resources :users, only: [:index, :show, :edit, :update]
+  	resources :users, only: [:index, :show, :edit, :update] do
+      resource :to_do_lists, only: [:create, :destroy]
+    end
   end
 
 end

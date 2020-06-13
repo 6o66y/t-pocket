@@ -65,6 +65,26 @@
 				</div>
 			</div>
 		</div>
+
+		<div class="col-md-5">
+			<!-- To do フォーム -->
+			<% if @user == current_user %>
+				<div class="row">
+					<div class="to_do_form">
+						<%= form_with(model: [@user, @to_do_list], local: true) do |f| %>
+							<%= f.text_area :to_do, rows:'3',placeholder: 'To Do', class: 'col-md-12' %>
+							<div class="to_do_list_submit col-md-12 text-right">
+								<%= f.submit '追加', class: 'to_do_submit' %>
+							</div>
+						<% end %>
+					</div>
+				</div>
+
+				<div class="row">
+					<%= render 'public/to_do_lists/to_do_list', to_do_lists: @to_do_lists %>
+				</div>
+			<% end %>
+		</div>
 	</div>
 </div>
 
