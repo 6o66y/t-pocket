@@ -2,9 +2,50 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-strong {
+.top strong, .top h3, .top h4, .top p, .top h5, .top h2 {
 	color: #fff;
 }
+
+.top h3 {
+	display: inline-block;
+	border-bottom: 3px solid #FF66CC;
+	margin-left: 80px;
+}
+
+.top span {
+	color: #FF66CC;
+}
+
+.top h4 {
+	display: inline-block;
+	border: 3px solid #FFFF00;
+	padding: 5px;
+}
+
+.top p {
+	font-size: 15px;
+}
+
+.top h5 {
+	font-size: 20px;
+	margin-top: 60px;
+}
+
+.blackboard_up {
+	margin-top: 30px;
+}
+
+.top_arrow_h5 {
+	padding-top: 5px;
+}
+
+.top h2 {
+	margin-top: 50px;
+	margin-left: 200px;
+	display: inline-block;
+	border: 3px solid #FF66CC;
+}
+
 
 /* 画像スライダーの設定 */
 #container{
