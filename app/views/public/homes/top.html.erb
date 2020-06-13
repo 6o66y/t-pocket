@@ -49,11 +49,67 @@
 		</div>
 
 		<div class="row">
-			<h2>さぁ、たくさんのヒントをあつめよう！</h2>
+			<%= link_to posts_path do%>
+				<h2>さぁ、たくさんのヒントをあつめよう！</h2>
+			<% end %>
+		</div>
+
+		<div class="row">
+			<% if user_signed_in? %>
+				<div class="recommend_posts">
+					<% @recommend_posts.each do |recommend_post| %>
+					<div class="col-md-1">
+						<%= link_to post_path(recommend_post) do%>
+							<%= render 'public/users/profile_image', user: recommend_post.user %>
+						<% end %>
+					</div>
+					<div class="col-md-3">
+						<%= link_to post_path(recommend_post) do%>
+							<div class="recommend_posts_title">
+								<%= recommend_post.title %>
+							</div>
+						<% end %>
+					</div>
+					<% end %>
+				</div>
+			<% else %>
+				<div class="recommend_posts">
+					<% @recommend_posts.each do |recommend_post| %>
+					<div class="col-md-1">
+						<%= link_to posts_path do%>
+							<%= render 'public/users/profile_image', user: recommend_post.user %>
+						<% end %>
+					</div>
+					<div class="col-md-3">
+						<%= link_to posts_path do%>
+							<div class="recommend_posts_title">
+								<%= recommend_post.title %>
+							</div>
+						<% end %>
+					</div>
+					<% end %>
+				</div>
+			<% end %>
 		</div>
 	</div>
 
 	<div class="col-md-2">
-		
+		<div class="top_category">
+			<table>
+				<thead>
+					<tr>
+						<th class="text-center">Categories</th>
+					</tr>
+				</thead>
+
+				<tbody class="text-center">
+					<% @categories.each do |category| %>
+					<tr>
+						<td><%= category.name %></td>
+					</tr>
+					<% end %>
+				</tbody>
+			</table>
+		</div>
 	</div>
 </div>
