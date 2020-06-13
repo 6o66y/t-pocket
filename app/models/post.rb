@@ -12,8 +12,8 @@ class Post < ApplicationRecord
 	attachment :image
 
 	validates :title, presence: true, length: {maximum: 100}
-	validates :objective, presence: true
+	# validates :objective, presence: true
 	validates :body, presence: true
-	validates :review, presence: true
+	# validates :review, presence: true
 	validates :category_id, presence: true
 end

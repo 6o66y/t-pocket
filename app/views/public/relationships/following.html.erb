@@ -3,17 +3,17 @@
 		<%= render 'public/users/profile', user: current_user %>
 	</div>
 
-	<div class="col-md-8">
+	<div class="col-md-5">
 		<div class="row">
 			<% if user ||= current_user %>
-				<div class="col-md-2 text-center">
+				<div class="col-md-2 text-center follow_icon">
 					<%= link_to user_path(@user) do%>
 						<%= render 'public/users/profile_image', user: @user %>
 						<h5><%= @user.username %></h5>
 					<% end %>
 				</div>
 			<% end %>
-			<h2 class="col-md-3">Following (<%= @user.following.count %>)</h2>
+			<h2 class="col-md-5">Following (<%= @user.following.count %>)</h2>
 		</div>
 		<div class="row">
 			<%= render 'public/users/index', users: @users %>
