@@ -1,90 +1,89 @@
 <div class="users_show">
-		<div class="col-md-2">
-			<%= render 'public/users/profile', user: @user %>
+	<div class="col-md-2">
+		<%= render 'public/users/profile', user: @user %>
+	</div>
+
+	<div class="col-md-5">
+		<div class="row">
+			<h2 class="col-md-4 text-center">Posts</h2>
 		</div>
 
-		<div class="col-md-5">
-			<div class="row">
-				<h2 class="col-md-4 text-center">Posts</h2>
-			</div>
+		<div class="row">
+			<table class="users_show_table col-md-7">
+				<thead>
+					<tr>
+						<th class="text-center col-md-3">Titles</th>
+						<th class="text-center col-md-3">Categories</th>
+						<th class="text-center col-md-3">Comments</th>
+						<th class="text-center col-md-3">Likes</th>
+					</tr>
+				</thead>
 
-			<div class="row">
-				<table class="users_show_table col-md-7">
-					<thead>
+				<tbody class="text-center">
+					<% @user.posts.each do |user_post| %>
 						<tr>
-							<th class="text-center col-md-3">Titles</th>
-							<th class="text-center col-md-3">Categories</th>
-							<th class="text-center col-md-3">Comments</th>
-							<th class="text-center col-md-3">Likes</th>
+							<td>
+								<%=link_to post_path(user_post) do %>
+									<div class="users_show_ users_show_title">
+										<%= user_post.title %>
+									</div>
+								<% end %>
+							</td>
+
+								<!-- カテゴリー -->
+							<td>
+								<%=link_to post_path(user_post) do %>
+									<div class="users_show_">
+										<%= user_post.category.name %>
+									</div>
+								<% end %>
+							</td>
+								<!-- コメント件数 -->
+							<td>
+								<%=link_to post_path(user_post) do %>
+									<div class="users_show_">
+										<%= user_post.comments.count %> <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+									</div>
+								<% end %>
+							</td>
+							<td>
+								<%= link_to post_path(user_post) do%>
+									<div class="posts_index_">
+										<span class="glyphicon glyphicon-star" aria-hidden="true"></span> <%= user_post.likes.count %>
+									</div>
+								<% end %>
+							</td>
 						</tr>
-					</thead>
+					<% end %>
+				</tbody>
+			</table>
+		</div>
 
-					<tbody class="text-center">
-						<% @user.posts.each do |user_post| %>
-							<tr>
-								<td>
-									<%=link_to post_path(user_post) do %>
-										<div class="users_show_ users_show_title">
-											<%= user_post.title %>
-										</div>
-									<% end %>
-								</td>
+		<div class="row">
+			<div class="col-md-11">
+				<%= paginate @user_posts %>
+			</div>
+		</div>
+	</div>
 
-									<!-- カテゴリー -->
-								<td>
-									<%=link_to post_path(user_post) do %>
-										<div class="users_show_">
-											<%= user_post.category.name %>
-										</div>
-									<% end %>
-								</td>
-									<!-- コメント件数 -->
-								<td>
-									<%=link_to post_path(user_post) do %>
-										<div class="users_show_">
-											<%= user_post.comments.count %> <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
-										</div>
-									<% end %>
-								</td>
-								<td>
-									<%= link_to post_path(user_post) do%>
-										<div class="posts_index_">
-											<span class="glyphicon glyphicon-star" aria-hidden="true"></span> <%= user_post.likes.count %>
-										</div>
-									<% end %>
-								</td>
-							</tr>
-						<% end %>
-					</tbody>
-				</table>
+	<div class="col-md-5">
+		<!-- To do フォーム -->
+		<% if @user == current_user %>
+			<div class="row">
+				<div class="to_do_form">
+					<%= form_with(model: [@user, @to_do_list], local: true) do |f| %>
+						<%= f.text_area :to_do, rows:'3',placeholder: 'To Do', class: 'col-md-12' %>
+						<div class="to_do_list_submit col-md-12 text-right">
+							<%= f.submit '追加', class: 'to_do_submit' %>
+						</div>
+					<% end %>
+				</div>
 			</div>
 
 			<div class="row">
-				<div class="col-md-11">
-					<%= paginate @user_posts %>
-				</div>
+				<%= render 'public/to_do_lists/to_do_list', to_do_lists: @to_do_lists %>
 			</div>
-		</div>
-
-		<div class="col-md-5">
-			<!-- To do フォーム -->
-			<% if @user == current_user %>
-				<div class="row">
-					<div class="to_do_form">
-						<%= form_with(model: [@user, @to_do_list], local: true) do |f| %>
-							<%= f.text_area :to_do, rows:'3',placeholder: 'To Do', class: 'col-md-12' %>
-							<div class="to_do_list_submit col-md-12 text-right">
-								<%= f.submit '追加', class: 'to_do_submit' %>
-							</div>
-						<% end %>
-					</div>
-				</div>
-
-				<div class="row">
-					<%= render 'public/to_do_lists/to_do_list', to_do_lists: @to_do_lists %>
-				</div>
-			<% end %>
-		</div>
+		<% end %>
 	</div>
 </div>
 
