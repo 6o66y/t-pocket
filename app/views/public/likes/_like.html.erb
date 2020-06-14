@@ -1,0 +1,13 @@
+<div class="like text-center col-md-2">
+	<% if post.liked_by?(current_user) %>
+		<%= link_to post_likes_path(post), class: 'like_font', method: :delete, remote: true do %>
+			<span class="glyphicon glyphicon-star" aria-hidden="true" style="color: white;"></span>
+			<%= post.likes.count %>
+		<% end %>
+	<% else %>
+		<%= link_to post_likes_path(post), class: 'like_font', method: :post, remote: true do %>
+			<span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+			<%= post.likes.count %>
+		<% end %>
+	<% end %>
+</div>
