@@ -18,11 +18,11 @@ class User < ApplicationRecord
 
   # フォロー機能
   # フォローユーザーを取得
-  has_many :relationships
+  has_many :relationships, dependent: :destroy
   has_many :following, through: :relationships, source: :follow
 
   # フォロワーを取得
-  has_many :reverse_of_relationships, class_name: 'Relationship', foreign_key: 'follow_id' # follow_idを入口にrelaitonshipsテーブルにアクセス
+  has_many :reverse_of_relationships, dependent: :destroy, class_name: 'Relationship', foreign_key: 'follow_id' # follow_idを入口にrelaitonshipsテーブルにアクセス
   has_many :followers, through: :reverse_of_relationships, source: :user
 
   # フォロー機能のメソッド

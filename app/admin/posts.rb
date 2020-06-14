@@ -1,14 +1,12 @@
 ActiveAdmin.register Post do
 
-  permit_params :title, :objective, :body, :review, :category_id
+  permit_params :category_id
 
   index do
+    selectable_column
     column :id
     column :user
     column :title
-    column :objective
-    column :body
-    column :review
     column :category_id
     column :created_at
     column :updated_at
@@ -29,5 +27,4 @@ ActiveAdmin.register Post do
     end
     active_admin_comments
   end
-
 end
