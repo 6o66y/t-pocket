@@ -1,8 +1,9 @@
 ActiveAdmin.register User do
 
-  permit_params :name, :is_deleted, :email
+  permit_params :name, :username, :introduction, :email, :is_deleted
 
   index do
+    selectable_column
     column :id
     column :name
     column :username
@@ -12,15 +13,6 @@ ActiveAdmin.register User do
     column :created_at
     column :updated_at
     actions
-  end
-
-  form do |f|
-    f.inputs do
-      f.input :name
-      f.input :email
-      f.input :is_deleted
-    end
-    f.actions
   end
 
   show do
@@ -35,5 +27,16 @@ ActiveAdmin.register User do
       row :updated_at
     end
     active_admin_comments
+  end
+
+  form do |f|
+    f.inputs do
+      f.input :name
+      f.input :username
+      f.input :email
+      f.input :introduction
+      f.input :is_deleted
+    end
+    f.actions
   end
 end
