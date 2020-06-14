@@ -24,18 +24,8 @@
 				<%= @post.category.name %>
 			</div>
 			<!-- いいね -->
-			<div class="like text-center col-md-2">
-				<% if @post.liked_by?(current_user) %>
-					<%= link_to post_likes_path(@post), class: 'like_font', method: :delete do %>
-						<span class="glyphicon glyphicon-star" aria-hidden="true" style="color: white;"></span>
-						<%= @post.likes.count %>
-					<% end %>
-				<% else %>
-					<%= link_to post_likes_path(@post), class: 'like_font', method: :post do %>
-						<span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
-						<%= @post.likes.count %>
-					<% end %>
-				<% end %>
+			<div id="like_btn_<% @post.id %>">
+				<%= render 'public/likes/like', post: @post %>
 			</div>
 			<!-- 日時 -->
 			<div class="post_datetime test-right">

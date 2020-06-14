@@ -13,7 +13,7 @@ class Public::UsersController < ApplicationController
     @user = User.find(params[:id])
     @user_posts = @user.posts.page(params[:page]).reverse_order
     @to_do_list = ToDoList.new
-    @to_do_lists = @user.to_do_lists.page(params[:page]).reverse_order
+    @to_do_lists = @user.to_do_lists
   end
 
   def edit
