@@ -1,3 +1,50 @@
 // Place all the styles related to the public::timelines controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/* おすすめの表示 */
+/* 見出しの設定 */
+.timeline h3 {
+	color: #fff;
+}
+
+/* 表の設定 */
+.timeline_left_top {
+	border-top-left-radius: 10px;
+}
+
+.timeline_right_top {
+	border-top-right-radius: 10px;
+}
+
+.timeline_left_bottom {
+	border-bottom-left-radius: 10px;
+}
+
+.timeline_right_bottom {
+	border-bottom-right-radius: 10px;
+}
+
+.timeline_table th {
+	background-color: #FFFF00;
+	border-bottom: 1px solid #005500;
+}
+
+.timeline_table td {
+	background-color: #fff;
+	margin-bottom: 10px;
+	padding-right: 15px;
+}
+
+.timeline_title {
+	width: 150px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin: 0 auto;
+}
+
+.timeline_ {
+	color: #000;
+}
