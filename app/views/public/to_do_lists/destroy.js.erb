@@ -1,0 +1,1 @@
+$('.to_do_<% @user.id %>').html("<%= j(render 'public/to_do_lists/to_do_list', to_do_lists: @user.to_do_lists) %>");
