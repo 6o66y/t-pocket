@@ -1,4 +1,5 @@
-ActiveAdmin.register Category do
+# frozen_string_literal: true
 
-  permit_params :name,:is_displayed
+ActiveAdmin.register Category do
+  permit_params :name, :is_displayed
 end

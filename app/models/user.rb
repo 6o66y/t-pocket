@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
@@ -22,22 +24,26 @@ class User < ApplicationRecord
   has_many :following, through: :relationships, source: :follow
 
   # フォロワーを取得
-  has_many :reverse_of_relationships, dependent: :destroy, class_name: 'Relationship', foreign_key: 'follow_id' # follow_idを入口にrelaitonshipsテーブルにアクセス
+  # follow_idを入口にrelaitonshipsテーブルにアクセス
+  has_many :reverse_of_relationships, dependent: :destroy, class_name: 'Relationship', foreign_key: 'follow_id'
   has_many :followers, through: :reverse_of_relationships, source: :user
 
   # フォロー機能のメソッド
-  def follow(other_user) # フォローする
+  # フォローする
+  def follow(other_user)
     unless self == other_user
       self.relationships.find_or_create_by(follow_id: other_user.id)
     end
   end
 
-  def unfollow(other_user) # フォローをはずす
+  # フォローをはずす
+  def unfollow(other_user)
     relationship = self.relationships.find_by(follow_id: other_user.id)
     relationship.destroy if relationship
   end
 
-  def following?(other_user) # フォローしていればtrueを返す
+  # フォローしていればtrueを返す
+  def following?(other_user)
     self.following.include?(other_user)
   end
 end

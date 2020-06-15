@@ -1,5 +1,6 @@
-ActiveAdmin.register Post do
+# frozen_string_literal: true
 
+ActiveAdmin.register Post do
   permit_params :category_id
 
   index do

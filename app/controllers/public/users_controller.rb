@@ -1,10 +1,11 @@
-class Public::UsersController < ApplicationController
+# frozen_string_literal: true
 
+class Public::UsersController < ApplicationController
   before_action :authenticate_user!
 
   def index
     @users = User.page(params[:page]).reverse_order
-    @recommendations = Post.order("RANDOM()").limit(5)
+    @recommendations = Post.order('RANDOM()').limit(5)
     # ransack
     @q = User.search(params[:q])
     @users = @q.result(distinct: true).page(params[:page]).reverse_order
