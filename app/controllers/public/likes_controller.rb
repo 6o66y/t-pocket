@@ -1,16 +1,17 @@
-class Public::LikesController < ApplicationController
+# frozen_string_literal: true
 
+class Public::LikesController < ApplicationController
   before_action :authenticate_user!
 
   def create
-  	@post = Post.find(params[:post_id])
-  	like = current_user.likes.new(post_id: @post.id)
-  	like.save
+    @post = Post.find(params[:post_id])
+    like = current_user.likes.new(post_id: @post.id)
+    like.save
   end
 
   def destroy
-  	@post = Post.find(params[:post_id])
+    @post = Post.find(params[:post_id])
     like = current_user.likes.find_by(post_id: @post.id)
-  	like.destroy
+    like.destroy
   end
 end
