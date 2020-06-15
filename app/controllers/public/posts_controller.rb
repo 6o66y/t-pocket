@@ -1,5 +1,6 @@
-class Public::PostsController < ApplicationController
+# frozen_string_literal: true
 
+class Public::PostsController < ApplicationController
   before_action :authenticate_user!, except: [:index]
 
   def new
