@@ -18,14 +18,6 @@
 	border-top-right-radius: 10px;
 }
 
-.timeline_left_bottom {
-	border-bottom-left-radius: 10px;
-}
-
-.timeline_right_bottom {
-	border-bottom-right-radius: 10px;
-}
-
 .timeline_table th {
 	background-color: #FFFF00;
 	border-bottom: 1px solid #005500;
@@ -35,6 +27,7 @@
 	background-color: #fff;
 	margin-bottom: 10px;
 	padding-right: 15px;
+	border-bottom: 3px solid #005500;
 }
 
 .timeline_title {

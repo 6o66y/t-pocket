@@ -5,14 +5,13 @@
 				<tr>
 					<th class="text-center timeline_left_top"></th>
 					<th class="text-center"></th>
-					<!-- <th class="text-center">Categories</th> -->
 					<th class="text-center timeline_right_top">　</th>
 				</tr>
 			</thead>
 
 			<tbody class="text-center">
 				<tr>
-					<td class="timeline_left_bottom">
+					<td>
 						<!-- ユーザー -->
 						<%= link_to user_path(recommendation.user) do%>
 							<%= render 'public/users/profile_image', user: recommendation.user %><br>
@@ -29,17 +28,10 @@
 							</div>
 						<% end %>
 					</td>
-						<!-- カテゴリー -->
-					<!-- <td> -->
-						<%#= link_to post_path(recommendation) do%>
-							<!-- <div class=""> -->
-								<%#= recommendation.category.name %>
-							<!-- </div> -->
-						<%# end %>
-					<!-- </td> -->
-						<!-- いいね数 -->
-					<td class="timeline_right_bottom">
+
+					<td>
 						<%= link_to post_path(recommendation) do%>
+							<!-- いいね数 -->
 							<div class="timeline_">
 								<span class="glyphicon glyphicon-star" aria-hidden="true"></span> <%= recommendation.likes.count %>
 							</div>
