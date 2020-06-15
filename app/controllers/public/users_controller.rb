@@ -4,6 +4,7 @@ class Public::UsersController < ApplicationController
 
   def index
     @users = User.page(params[:page]).reverse_order
+    @recommendations = Post.order("RANDOM()").limit(5)
     # ransack
     @q = User.search(params[:q])
     @users = @q.result(distinct: true).page(params[:page]).reverse_order
