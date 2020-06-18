@@ -54,6 +54,24 @@
 /* 文字表示の設定 */
 
 
+/* chalkの設定 */
+.chalk {
+	position: relative;
+}
+
+.chalk_white {
+	background-image: image-url("chalk_white.png");
+	height: 50px;
+	width: 11px;
+	background-size: cover;
+	position: absolute;
+	bottom: 16px;
+	right: 190px;
+	transform: rotate(-40deg);
+}
+/* chalkの設定 */
+
+
 
 /* 表の設定 */
 .top_category_table {
