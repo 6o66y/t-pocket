@@ -11,6 +11,10 @@ class User < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_many :to_do_lists, dependent: :destroy
 
+  validates :username, presence: true, length: { maximum: 15 }
+  validates :name, presence: true, length: { maximum: 20 }
+  validates :introduction, length: { maximum: 200 }
+
   attachment :profile_image
 
   # [設定]退会するとログインできない
