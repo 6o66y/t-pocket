@@ -93,7 +93,28 @@
 	background-image: image-url("image5.jpg");
 }
 
-.image6 {
-	background-image: image-url("image6.jpg");
-}
 /* 画像スライダーの設定 */
+
+/* top画像の設定 */
+.top_background-image {
+	background-image: image-url("image6.jpg");
+	background-size: cover;
+	height: 700px;
+	width: 100%;
+	position: relative;
+}
+
+.top_background-image h1 {
+	color: #000;
+	line-height: 700px;
+	font-size: 50px;
+}
+
+.top_background-image p {
+	color: #000;
+	font-size: 22px;
+	position: absolute;
+	bottom: 160px;
+	left: 59%;
+}
+/* top画像の設定 */

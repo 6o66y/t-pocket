@@ -17,6 +17,9 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
+
+// topページ
+// スライド
 $(document).ready(function () {
 	$("#theTarget").skippr({
 		// スライドショーの変化 ("fade" or "slide")
@@ -41,3 +44,16 @@ $(document).ready(function () {
 	    hidePrevious : false
 	});
 });
+
+// mouseover
+$(function(){
+	$('.top_mouseover').on('mouseover', function(){
+		$('.top_mouseover').css('color','#FFFF00');
+	});
+});
+
+// top画像
+$(function(){
+	$('.top_background-image').slideUp(4000);
+});
+// topページ
