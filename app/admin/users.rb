@@ -39,4 +39,12 @@ ActiveAdmin.register User do
     end
     f.actions
   end
+
+  filter :id
+  filter :name
+  filter :username
+  filter :email
+  filter :introduction
+  filter :is_deleted
+  filter :created_at
 end

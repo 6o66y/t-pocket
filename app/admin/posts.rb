@@ -28,4 +28,13 @@ ActiveAdmin.register Post do
     end
     active_admin_comments
   end
+
+  filter :id
+  filter :user
+  filter :title
+  filter :objective
+  filter :body
+  filter :review
+  filter :category_id
+  filter :created_at
 end
