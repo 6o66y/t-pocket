@@ -3,6 +3,13 @@
 		<h2 class="col-md-1 text-center">Edit</h2>
 	</div>
 
+	<!-- error_messages -->
+	<% if @post.errors.any? %>
+	  <% @post.errors.full_messages.each do |message| %>
+	    <li class="error_messages"><%= message %></li>
+	  <% end %>
+	<% end %>
+
 	<%=form_with model: @post, url: post_path(@post), local: true do |f| %>
 		<div class="col-md-6">
 			<div class="row">

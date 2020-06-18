@@ -21,6 +21,7 @@
 
 				<tbody class="text-center">
 					<% @user.posts.each do |user_post| %>
+					<%# if user_post.user.is_deleted == false %>
 						<tr>
 							<td>
 								<%=link_to post_path(user_post) do %>
@@ -54,6 +55,7 @@
 								<% end %>
 							</td>
 						</tr>
+					<%# end %>
 					<% end %>
 				</tbody>
 			</table>
