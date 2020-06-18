@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/* fontの設定 */
 .top strong, .top h3, .top h4, .top p, .top h5, .top h2 {
 	color: #fff;
 }
@@ -30,7 +31,11 @@
 	font-size: 20px;
 	margin-top: 60px;
 }
+/* fontの設定 */
 
+
+
+/* 文字表示の設定 */
 .blackboard_up {
 	margin-top: 30px;
 }
@@ -46,6 +51,18 @@
 	display: inline-block;
 	border: 3px solid #FF66CC;
 }
+/* 文字表示の設定 */
+
+
+
+/* 表の設定 */
+.top_category_table {
+	margin-top: 30px;
+}
+
+.top_category_table th {
+	background-color: #66CCCC;
+}
 
 .top_category tbody, .recommend_posts tbody {
 	background-color: #fff;
@@ -56,7 +73,10 @@
 	font-size: 15px;
 	border-bottom: 1px solid #005500;
 }
+/* 表の設定 */
 
+
+/* おすすめの設定 */
 .recommend_posts_title {
 	color: #fff;
 	width: 100%;
@@ -66,6 +86,8 @@
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
+/* おすすめの設定 */
+
 
 
 /* 画像スライダーの設定 */
@@ -94,6 +116,8 @@
 }
 
 /* 画像スライダーの設定 */
+
+
 
 /* top画像の設定 */
 .top_background-image {
