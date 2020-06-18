@@ -38,6 +38,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.string :profile_image_id
       t.string :introduction
       t.boolean :is_deleted, default: false
+      t.datetime :read_at, default: "2020-01-01 00:00:00"
       t.timestamps null: false
     end
 
