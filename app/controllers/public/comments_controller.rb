@@ -7,8 +7,12 @@ class Public::CommentsController < ApplicationController
     @post = Post.find(params[:post_id])
     @comment = @post.comments.new(comment_params)
     @comment.user_id = current_user.id
-    @comment.save
-    redirect_to post_path(@post)
+    if @comment.save
+      redirect_to post_path(@post)
+    else
+      flash[:error] = "・Post comment can't be blank"
+      redirect_back(fallback_location: posts_path)
+    end
   end
 
   def edit
@@ -17,9 +21,12 @@ class Public::CommentsController < ApplicationController
 
   def update
     @comment = Comment.find(params[:post_id])
-    @comment.update(comment_params)
-    @post = Post.find(params[:id])
-    redirect_to post_path(@post)
+    if @comment.update(comment_params)
+      @post = Post.find(params[:id])
+      redirect_to post_path(@post)
+    else
+      render :edit
+    end
   end
 
   def destroy
