@@ -51,7 +51,13 @@ $(document).ready(function () {
 // mouseover
 $(function(){
 	$('.top_mouseover').on('mouseover', function(){
-		$('.top_mouseover').css('color','#FFFF00');
+		$(this).css('color','#FFFF00');
+	});
+});
+
+$(function(){
+	$('.top_mouseover').on('mouseout', function(){
+		$(this).css('color','');
 	});
 });
 // mouseover
