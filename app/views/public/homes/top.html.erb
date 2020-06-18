@@ -1,4 +1,8 @@
 <div class="top">
+	<div class="top_background-image">
+		<h1 class="text-center">せんせいのぽけっと</h1>
+		<p>T-pocket</p>
+	</div>
 	<div class="col-md-2">
 		<% if user_signed_in? %>
 			<%= render 'public/users/profile', user: current_user %>
@@ -10,7 +14,7 @@
 					<div class="image3"></div>
 					<div class="image4"></div>
 					<div class="image5"></div>
-					<div class="image6"></div>
+					<!-- <div class="image6"></div> -->
 				</div>
 			</div>
 		<% end %>
@@ -50,7 +54,7 @@
 
 		<div class="row">
 			<%= link_to posts_path do%>
-				<h2>さぁ、たくさんのヒントをあつめよう！</h2>
+				<h2 class="top_mouseover">さぁ、たくさんのヒントをあつめよう！</h2>
 			<% end %>
 		</div>
 
