@@ -42,3 +42,12 @@
 .timeline_ {
 	color: #000;
 }
+
+/* 未読マーク */
+.unread {
+    float: right;
+    border-radius: 100%;
+    height: 15px;
+    width: 15px;
+    background-color: #FFCCFF;
+}
