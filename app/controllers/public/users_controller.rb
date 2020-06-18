@@ -4,10 +4,10 @@ class Public::UsersController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @users = User.page(params[:page]).reverse_order
+    @users = User.where(is_deleted: false).page(params[:page]).reverse_order
     @recommendations = Post.order('RANDOM()').limit(5)
     # ransack
-    @q = User.search(params[:q])
+    @q = User.where(is_deleted: false).search(params[:q])
     @users = @q.result(distinct: true).page(params[:page]).reverse_order
   end
 
