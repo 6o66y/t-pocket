@@ -44,6 +44,9 @@ $(document).ready(function () {
 	    hidePrevious : false
 	});
 });
+// スライド
+
+
 
 // mouseover
 $(function(){
@@ -51,6 +54,9 @@ $(function(){
 		$('.top_mouseover').css('color','#FFFF00');
 	});
 });
+// mouseover
+
+
 
 // top画像
 $(function(){
