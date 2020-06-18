@@ -20,7 +20,7 @@
 
 // topページ
 // スライド
-$(document).ready(function () {
+$(function () {
 	$("#theTarget").skippr({
 		// スライドショーの変化 ("fade" or "slide")
 		transition : 'slide',
@@ -47,7 +47,6 @@ $(document).ready(function () {
 // スライド
 
 
-
 // mouseover
 $(function(){
 	$('.top_mouseover').on('mouseover', function(){
@@ -61,7 +60,6 @@ $(function(){
 	});
 });
 // mouseover
-
 
 
 // top画像
