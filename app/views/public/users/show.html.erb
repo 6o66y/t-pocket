@@ -20,7 +20,7 @@
 				</thead>
 
 				<tbody class="text-center">
-					<% @user.posts.each do |user_post| %>
+					<% @user_posts.each do |user_post| %>
 					<%# if user_post.user.is_deleted == false %>
 						<tr>
 							<td>
@@ -62,7 +62,7 @@
 		</div>
 
 		<div class="row">
-			<div class="col-md-11">
+			<div class="col-md-10">
 				<%= paginate @user_posts %>
 			</div>
 		</div>
