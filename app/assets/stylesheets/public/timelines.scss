@@ -31,12 +31,18 @@
 	border-bottom: 3px solid #005500;
 }
 
+.timeline_name {
+	width: 100px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
 .timeline_title {
 	width: 150px;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	margin: 0 auto;
 }
 
 .timeline_ {
