@@ -15,7 +15,7 @@
 						<!-- ユーザー -->
 						<%= link_to user_path(recommendation.user) do%>
 							<%= render 'public/users/profile_image', user: recommendation.user %><br>
-							<div class="timeline_">
+							<div class="timeline_ timeline_name">
 								<%= recommendation.user.username %>
 							</div>
 						<% end %>
