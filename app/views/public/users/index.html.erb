@@ -10,7 +10,7 @@
 			<!-- 検索フォーム -->
 			<%= search_form_for @q do |f| %>
 				<div class="col-md-5 text-right users_search">
-					<%= f.search_field :username_cont, placeholder: 'ユーザー名' %>
+					<%= f.search_field :username_or_introduction_cont, placeholder: 'ユーザー名 of 自己紹介' %>
 
 					<%= f.submit '検索', class: 'users_search_btn' %>
 				</div>
