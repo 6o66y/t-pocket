@@ -14,8 +14,8 @@ class Public::TimelinesController < ApplicationController
   private
 
   def read
-  	@user = current_user
-  	@user.read_at = Time.zone.now
-  	@user.save
+    @user = current_user
+    @user.read_at = Time.zone.now
+    @user.save
   end
 end
