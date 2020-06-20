@@ -21,7 +21,7 @@
 						<% end %>
 					</td>
 					<td>
-						<%= link_to post_path(recommendation) do%>
+						<%= link_to post_path(recommendation), data: {'turbolinks' => false} do%>
 							<!-- 投稿　タイトル -->
 							<div class="timeline_title timeline_">
 								<%= recommendation.title %>
@@ -30,7 +30,7 @@
 					</td>
 
 					<td>
-						<%= link_to post_path(recommendation) do%>
+						<%= link_to post_path(recommendation), data: {'turbolinks' => false} do%>
 							<!-- いいね数 -->
 							<div class="timeline_">
 								<span class="glyphicon glyphicon-star" aria-hidden="true"></span> <%= recommendation.likes.count %>
