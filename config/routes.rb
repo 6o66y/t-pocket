@@ -20,7 +20,7 @@ Rails.application.routes.draw do
     patch 'users/update_password/:id' => 'users#update_password', as: 'update_password'
 
   	resources :posts, only: [:new, :create, :index, :show, :edit, :update, :destroy] do
-      resources :comments, only: [:create, :edit, :update, :destroy]
+      resource :comments, only: [:create, :edit, :update, :destroy]
       resource :likes, only: [:create, :destroy]
     end
   	resources :relationships, only: [:create, :destroy]
