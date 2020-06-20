@@ -9,8 +9,35 @@
 	</thead>
 
 	<tbody>
-		<% comments.each do |comment| %>
+		<% comments.first(6).each do |comment| %>
 			<tr>
+				<td class="text-center col-md-1">
+					<%= link_to user_path(comment.user) do%>
+						<%= render 'public/users/profile_image', user: comment.user %><br>
+						<div class="show_username">
+							<%= comment.user.username %>
+						</div>
+					<% end %>
+				</td>
+
+				<td class="post_comment">
+					<div class="col-md-7">
+						<%= simple_format(comment.post_comment) %>
+					</div>
+
+					<% if comment.user == current_user %>
+						<div class="s_comment_btn">
+							<%= link_to '編集',edit_post_comments_path(comment), class: 'btn comment_btn col-md-2' %>
+
+							<%= link_to '削除', post_comments_path(comment), method: :delete, remote: true, data: {confirm: '本当に削除しますか？'}, class: 'btn comment_delete_btn col-md-2' %>
+						</div>
+					<% end %>
+				</td>
+			</tr>
+		<% end %>
+
+		<% comments.offset(6).each do |comment| %>
+			<tr class="more">
 				<td class="text-center col-md-1">
 					<%= link_to user_path(comment.user) do%>
 						<%= render 'public/users/profile_image', user: comment.user %><br>
@@ -37,3 +64,6 @@
 		<% end %>
 	</tbody>
 </table>
+
+<p class="open text-right">もっと見る…</p>
+<p class="close_btn text-right"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></p>

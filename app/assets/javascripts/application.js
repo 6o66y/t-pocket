@@ -67,3 +67,37 @@ $(function(){
 	$('.top_background-image').slideUp(4000);
 });
 // topページ
+
+
+
+// コメント一覧の開閉
+$(function(){
+	$('.open').on('click',function(){
+		$('.more').show();
+		$(this).hide();
+		$('.close_btn').show();
+	});
+
+	$('.close_btn').on('click',function(){
+		$('.more').hide();
+		$(this).hide();
+		$('.open').show();
+	});
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
