@@ -7,11 +7,7 @@ class Public::CommentsController < ApplicationController
     @post = Post.find(params[:post_id])
     @comment = @post.comments.new(comment_params)
     @comment.user_id = current_user.id
-    if @comment.save
-    else
-      flash[:error] = "・Post comment can't be blank"
-      redirect_back(fallback_location: posts_path)
-    end
+    @comment.save
   end
 
   def edit
