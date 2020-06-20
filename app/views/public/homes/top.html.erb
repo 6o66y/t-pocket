@@ -64,12 +64,12 @@
 				<div class="recommend_posts">
 					<% @recommend_posts.each do |recommend_post| %>
 					<div class="col-md-1">
-						<%= link_to post_path(recommend_post) do%>
+						<%= link_to post_path(recommend_post), data: {'turbolinks' => false} do%>
 							<%= render 'public/users/profile_image', user: recommend_post.user %>
 						<% end %>
 					</div>
 					<div class="col-md-3">
-						<%= link_to post_path(recommend_post) do%>
+						<%= link_to post_path(recommend_post), data: {'turbolinks' => false} do%>
 							<div class="recommend_posts_title">
 								<%= recommend_post.title %>
 							</div>
