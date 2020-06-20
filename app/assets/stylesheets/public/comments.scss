@@ -70,6 +70,21 @@
 	margin-left: 10px;
 }
 
+/* もっと見る */
+.open {
+	color: #fff;
+}
+
+.close_btn {
+	color: #fff;
+	display: none;
+	font-size: 20px;
+}
+
+.more {
+	display: none;
+}
+
 /* 「送信」ボタンの設定 */
 .comment_submit > .c_submit {
 	border-color: #D9E5FF;
@@ -105,3 +120,4 @@
 	color: #D9E5FF;
 }
 /* comment_edit */
+

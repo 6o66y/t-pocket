@@ -23,7 +23,7 @@
 						<% end %>
 					</td>
 					<td>
-						<%= link_to post_path(post) do%>
+						<%= link_to post_path(post), data: {'turbolinks' => false} do%>
 							<!-- 投稿　タイトル -->
 							<div class="posts_index_ posts_index_title">
 								<%= post.title %>
@@ -32,7 +32,7 @@
 					</td>
 						<!-- カテゴリー -->
 					<td>
-						<%= link_to post_path(post) do%>
+						<%= link_to post_path(post), data: {'turbolinks' => false} do%>
 							<div class="posts_index_">
 								<%= post.category.name %>
 							</div>
@@ -40,7 +40,7 @@
 					</td>
 						<!-- コメント件数 -->
 					<td>
-						<%= link_to post_path(post) do%>
+						<%= link_to post_path(post), data: {'turbolinks' => false} do%>
 							<div class="posts_index_">
 								<%= post.comments.count %> <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
 							</div>
@@ -48,7 +48,7 @@
 					</td>
 						<!-- いいね数 -->
 					<td>
-						<%= link_to post_path(post) do%>
+						<%= link_to post_path(post), data: {'turbolinks' => false} do%>
 							<div class="posts_index_">
 								<span class="glyphicon glyphicon-star" aria-hidden="true"></span> <%= post.likes.count %>
 							</div>

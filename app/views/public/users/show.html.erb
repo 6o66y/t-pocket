@@ -24,7 +24,7 @@
 					<%# if user_post.user.is_deleted == false %>
 						<tr>
 							<td>
-								<%=link_to post_path(user_post) do %>
+								<%=link_to post_path(user_post), data: {'turbolinks' => false} do %>
 									<div class="users_show_ users_show_title">
 										<%= user_post.title %>
 									</div>
@@ -33,7 +33,7 @@
 
 								<!-- カテゴリー -->
 							<td>
-								<%=link_to post_path(user_post) do %>
+								<%=link_to post_path(user_post), data: {'turbolinks' => false} do %>
 									<div class="users_show_">
 										<%= user_post.category.name %>
 									</div>
@@ -41,14 +41,15 @@
 							</td>
 								<!-- コメント件数 -->
 							<td>
-								<%=link_to post_path(user_post) do %>
+								<%=link_to post_path(user_post), data: {'turbolinks' => false} do %>
 									<div class="users_show_">
 										<%= user_post.comments.count %> <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
 									</div>
 								<% end %>
 							</td>
 							<td>
-								<%= link_to post_path(user_post) do%>
+								<!-- いいね数 -->
+								<%= link_to post_path(user_post), data: {'turbolinks' => false} do%>
 									<div class="posts_index_">
 										<span class="glyphicon glyphicon-star" aria-hidden="true"></span> <%= user_post.likes.count %>
 									</div>
