@@ -1,0 +1,49 @@
+<div class="edit">
+	<div class="row">
+		<h2 class="col-md-1 text-center">Edit</h2>
+	</div>
+
+	<!-- error_messages -->
+	<% if @post.errors.any? %>
+	  <% @post.errors.full_messages.each do |message| %>
+	    <li class="error_messages"><%= message %></li>
+	  <% end %>
+	<% end %>
+
+	<%=form_with model: @post, url: post_path(@post), local: true do |f| %>
+		<div class="col-md-6">
+			<div class="row">
+				<%= f.text_field :title, placeholder: 'タイトル', class: 'post_title col-md-4' %>
+			</div>
+
+			<div class="row">
+				<%= f.text_area :objective, placeholder: 'めあて', class: 'post_objective col-md-12' %>
+			</div>
+
+			<div class="row">
+				<%= f.text_area :body, placeholder: 'テキスト', class: 'post_body col-md-12' %>
+			</div>
+
+			<div class="row">
+				<%= f.text_area :review, placeholder: 'ふりかえり', class: 'post_review col-md-12' %>
+			</div>
+		</div>
+
+		<div class="col-md-5 text-right">
+			<%= attachment_image_tag(@post, :image, fallback: 'no_image.jpg', size: '450x300') %>
+			<div class="edit_attachment">
+				<%= f.attachment_field :image %>
+			</div>
+
+			<div class="edit_category">
+				<%= f.collection_select :category_id, Category.where(is_displayed: true), :id, :name, include_blank: '-- カテゴリー選択 --' %>
+			</div>
+
+			<div class="p_edit_btn">
+				<%= f.submit '変更を保存', class: 'btn edit_post_btn' %>
+
+				<%= link_to '削除', post_path(@post), method: :delete, type: 'button', data: {confirm: '本当に削除しますか？'}, class: 'btn edit_delete_btn' %>
+			</div>
+		</div>
+	<% end %>
+</div>

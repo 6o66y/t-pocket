@@ -1,0 +1,162 @@
+// Place all the styles related to the public::homes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* fontの設定 */
+.top strong, .top h3, .top h4, .top p, .top h5, .top h2 {
+	color: #fff;
+}
+
+.top h3 {
+	display: inline-block;
+	border-bottom: 3px solid #FF66CC;
+	margin-left: 80px;
+}
+
+.top span {
+	color: #FF66CC;
+}
+
+.top h4 {
+	display: inline-block;
+	border: 3px solid #FFFF00;
+	padding: 5px;
+}
+
+.top p {
+	font-size: 15px;
+}
+
+.top h5 {
+	font-size: 20px;
+	margin-top: 60px;
+}
+/* fontの設定 */
+
+
+
+/* 文字表示の設定 */
+.blackboard_up {
+	margin-top: 30px;
+}
+
+.top_arrow_h5 {
+	padding-top: 5px;
+}
+
+.top h2 {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	margin-left: 200px;
+	display: inline-block;
+	border: 3px solid #FF66CC;
+}
+/* 文字表示の設定 */
+
+
+/* chalkの設定 */
+.chalk {
+	position: relative;
+}
+
+.chalk_white {
+	background-image: image-url("chalk_white.png");
+	height: 50px;
+	width: 11px;
+	background-size: cover;
+	position: absolute;
+	bottom: 16px;
+	right: 190px;
+	transform: rotate(-40deg);
+}
+/* chalkの設定 */
+
+
+
+/* 表の設定 */
+.top_category_table {
+	margin-top: 30px;
+}
+
+.top_category_table th {
+	background-color: #66CCCC;
+}
+
+.top_category tbody, .recommend_posts tbody {
+	background-color: #fff;
+}
+
+.top_category td, .recommend_posts td {
+	padding: 10px;
+	font-size: 15px;
+	border-bottom: 1px solid #005500;
+}
+/* 表の設定 */
+
+
+/* おすすめの設定 */
+.recommend_posts_title {
+	color: #fff;
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+/* おすすめの設定 */
+
+
+
+/* 画像スライダーの設定 */
+#container{
+	height: 650px;
+}
+
+.image1 {
+	background-image: image-url("image1.jpg");
+}
+
+.image2 {
+	background-image: image-url("image2.jpg");
+}
+
+.image3 {
+	background-image: image-url("image3.jpg");
+}
+
+.image4 {
+	background-image: image-url("image4.jpg");
+}
+
+.image5 {
+	background-image: image-url("image5.jpg");
+}
+
+/* 画像スライダーの設定 */
+
+
+
+/* top画像の設定 */
+.top_background-image {
+	background-image: image-url("image6.jpg");
+	background-size: cover;
+	height: 700px;
+	width: 100%;
+	position: relative;
+}
+
+.top_background-image h1 {
+	color: #000;
+	line-height: 700px;
+	font-size: 50px;
+}
+
+.top_background-image p {
+	color: #000;
+	font-size: 22px;
+	position: absolute;
+	bottom: 160px;
+	left: 59%;
+}
+/* top画像の設定 */

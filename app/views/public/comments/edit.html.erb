@@ -1,0 +1,21 @@
+<div class="edit_comment">
+	<div class="row">
+		<h2>Edit Comment</h2>
+	</div>
+
+	<!-- error_messages -->
+	<% if @comment.errors.any? %>
+	  <% @comment.errors.full_messages.each do |message| %>
+	    <li class="error_messages"><%= message %></li>
+	  <% end %>
+	<% end %>
+
+	<div class="col-md-5 text-center">
+		<%= form_with(model: [@post, @comment], url: post_comment_path(@comment), local: true) do |f| %>
+			<%= f.text_area :post_comment, rows:'6',placeholder: 'コメント', class: 'edit_comment_form' %>
+			<div class="u_e_btn">
+		    	<%= f.submit '変更を保存', class: 'btn user_edit_btn' %>
+		    </div>
+		<% end %>
+	</div>
+</div>

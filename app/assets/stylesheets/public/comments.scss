@@ -1,0 +1,107 @@
+// Place all the styles related to the public::comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/* comment */
+/* コメントフォームの設定 */
+.comment_form {
+	width: 100%;
+	padding: 30px;
+}
+
+/* コメント表示の設定 */
+.comment_table {
+	margin-left: 30px;
+	margin-top: 50px;
+	word-break: break-all;
+}
+
+.comment_table th {
+	background-color: #FFFF00;
+	color: #f00;
+}
+
+.comment_table td {
+	color: #fff;
+	padding-top: 10px;
+	border-bottom: 1px solid #fff;
+}
+
+/* コメントしたユーザー名設定 */
+.show_username {
+	color: #fff;
+	width: 100px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.show_username:hover {
+	color: #fff;
+}
+
+/* 「編集」ボタンの設定 */
+.s_comment_btn > .comment_btn {
+	background-color: #990000;
+	border-color: #000;
+	color: #fff;
+	margin-left: 10px;
+}
+
+.s_comment_btn > .comment_btn:hover {
+	background-color: #FAEBD7;
+	border-color: #990000;
+	color: #990000;
+}
+
+/* 「削除」ボタンの設定 */
+.s_comment_btn > .comment_delete_btn {
+	background-color: #fff;
+	border-color: #990000;
+	color: #990000;
+	margin-left: 10px;
+}
+
+.s_comment_btn > .comment_delete_btn:hover {
+	background-color: #FAEBD7;
+	border-color: #990000;
+	color: #990000;
+	margin-left: 10px;
+}
+
+/* 「送信」ボタンの設定 */
+.comment_submit > .c_submit {
+	border-color: #D9E5FF;
+}
+
+.comment_submit > .c_submit:hover {
+	border-color: #D9E5FF;
+	color: #D9E5FF;
+}
+/* comment */
+
+
+
+/* edit_comment */
+/* 見出しの設定 */
+.edit_comment h2 {
+	color: #fff;
+	margin-left: 30px;
+}
+
+/* コメント編集フォームの設定 */
+.edit_comment_form {
+	width:100%;
+}
+
+/* 「変更を保存」ボタンの設定 */
+.u_e_btn > .user_edit_btn {
+	border-color: #D9E5FF;
+}
+
+.u_e_btn > .user_edit_btn:hover {
+	border-color: #D9E5FF;
+	color: #D9E5FF;
+}
+/* comment_edit */

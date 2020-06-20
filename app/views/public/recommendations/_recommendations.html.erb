@@ -1,0 +1,43 @@
+<h3>Recommendations</h3>
+	<table class="timeline_table">
+		<% recommendations.each do |recommendation| %>
+			<thead>
+				<tr>
+					<th class="text-center timeline_left_top"></th>
+					<th class="text-center"></th>
+					<th class="text-center timeline_right_top">　</th>
+				</tr>
+			</thead>
+
+			<tbody class="text-center">
+				<tr>
+					<td>
+						<!-- ユーザー -->
+						<%= link_to user_path(recommendation.user) do%>
+							<%= render 'public/users/profile_image', user: recommendation.user %><br>
+							<div class="timeline_ timeline_name">
+								<%= recommendation.user.username %>
+							</div>
+						<% end %>
+					</td>
+					<td>
+						<%= link_to post_path(recommendation) do%>
+							<!-- 投稿　タイトル -->
+							<div class="timeline_title timeline_">
+								<%= recommendation.title %>
+							</div>
+						<% end %>
+					</td>
+
+					<td>
+						<%= link_to post_path(recommendation) do%>
+							<!-- いいね数 -->
+							<div class="timeline_">
+								<span class="glyphicon glyphicon-star" aria-hidden="true"></span> <%= recommendation.likes.count %>
+							</div>
+						<% end %>
+					</td>
+				</tr>
+			</tbody>
+		<% end %>
+	</table>

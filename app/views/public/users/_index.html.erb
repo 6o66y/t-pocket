@@ -1,0 +1,39 @@
+<div class="row">
+	<table class="users_index_table col-md-7">
+		<thead>
+			<tr>
+				<th class="text-center col-md-1">Users</th>
+				<th class="text-center col-md-1"></th>
+				<th class="text-center col-md-1"></th>
+			</tr>
+		</thead>
+
+		<tbody class="text-center">
+			<% users.each do |user| %>
+				<tr>
+					<td>
+						<%= link_to user_path(user) do%>
+							<%= render 'public/users/profile_image', user: user %>
+						<% end %>
+					</td>
+					<td><%= link_to user_path(user) do%>
+							<div class="users_index_name">
+								<%= user.username %>
+							</div>
+						<% end %>
+					</td>
+					<td>
+						<!-- フォローボタン -->
+						<%= render 'public/relationships/follow_button', user: user %>
+					</td>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>
+
+<div class="row">
+	<div class="col-md-9">
+		<%= paginate users %>
+	</div>
+</div>

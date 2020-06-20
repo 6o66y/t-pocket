@@ -1,0 +1,15 @@
+<div class="retire">
+	<div class="retire_background text-center">
+		<h1>本当に退会しますか？</h1>
+		<p>退会すると、会員登録情報や投稿内容が閲覧できなくなります。<br>
+			退会する場合は、「退会する」をクリックしてください。</p>
+	</div>
+
+
+
+
+	<div class="retire_btn text-center">
+		<%= link_to '退会しない', user_path(@user),class: 'btn btn-primary' %>
+		<%= link_to '退会する', retire_path(@user), method: :PATCH, class: 'btn btn-danger' %>
+	</div>
+</div>

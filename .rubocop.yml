@@ -1,0 +1,28 @@
+inherit_from: .rubocop_todo.yml
+
+# 日本語でのコメントを許可
+AsciiComments:
+  Enabled: false
+
+# モジュール名::クラス名の定義を許可
+ClassAndModuleChildren:
+  Enabled: false
+
+# クラスにコメントを残さない
+Documentation:
+  Enabled: false
+
+# 最大文字数
+LineLength:
+  Max: 150
+
+# チェック対象から外す
+AllCops:
+  Exclude:
+    - db/**/*
+    - config/**/*
+    - Gemfile
+    - Rakefile
+    - bin/*
+    - app/admin/*
+    - test/**/*

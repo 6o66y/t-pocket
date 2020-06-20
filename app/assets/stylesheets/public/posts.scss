@@ -1,0 +1,208 @@
+// Place all the styles related to the public::posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* 見出しの設定 */
+.new h2, .show h2, .edit h2 {
+	color: #fff;
+	background-color: #990000;
+}
+
+.posts_index h2 {
+	color: #fff;
+}
+
+/* [投稿]タイトルの設定 */
+.post_title {
+	margin-bottom: 10px;
+	background-color: #fff;
+	border-radius: 5px;
+	height: 100%;
+}
+
+/* [new & edit]めあての設定 */
+.post_objective {
+	margin-bottom: 10px;
+	height: 80px;
+	background-color: #FFEEFF;
+	border-radius: 5px;
+}
+
+/* [new & edit]詳細の設定 */
+.post_body {
+	margin-bottom: 10px;
+	height: 500px;
+	background-color: #E0FFFF;
+	border-radius: 5px;
+}
+
+/* [new & edit]ふりかえりの設定 */
+.post_review {
+	margin-bottom: 10px;
+	height: 100px;
+	background-color: #F0FFF0;
+	border-radius: 5px;
+}
+
+/* [new & edit] attachment_fieldの設定 */
+.new_attachment, .edit_attachment {
+	margin-left: 110px;
+	color: #fff;
+}
+
+
+/* [edit] 「変更を保存」ボタンの設定 */
+.p_edit_btn > .edit_post_btn {
+	border-color: #D9E5FF;
+}
+
+.p_edit_btn > .edit_post_btn:hover {
+	border-color: #D9E5FF;
+	color: #D9E5FF;
+}
+
+/* [edit] 「削除」ボタンの設定 */
+.p_edit_btn > .edit_delete_btn {
+	background-color: #fff;
+	border-color: #990000;
+	color: #990000;
+	margin-left: 10px;
+}
+
+.p_edit_btn > .edit_delete_btn:hover {
+	background-color: #FAEBD7;
+	border-color: #000;
+	color: #990000;
+}
+
+/* [edit] カテゴリー選択の設定 */
+.edit_category {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+
+
+/* [show]詳細の設定 */
+.post_body_ {
+	margin-bottom: 10px;
+	height: 100%;
+	background-color: #E0FFFF;
+	border-radius: 5px;
+}
+
+/* [show]めあての設定 */
+.post_objective_ {
+	margin-bottom: 10px;
+	height: 100%;
+	background-color: #FFEEFF;
+	border-radius: 5px;
+}
+
+/* [show]ふりかえりの設定 */
+.post_review_ {
+	margin-bottom: 10px;
+	height: 100%;
+	background-color: #F0FFF0;
+	border-radius: 5px;
+}
+
+/* [show]カテゴリーの設定 */
+.post_category {
+	margin-left: 10px;
+	margin-top: 10px;
+	background-color: #FAEBD7;
+	color: #990000;
+	border: 1px solid #990000;
+	border-radius: 10px;
+}
+
+/* [show] ユーザーアイコンの設定 */
+.post_show_user {
+	margin_bottom: 5px;
+	color: #fff;
+}
+
+.show_username {
+	margin_bottom: 5px;
+	color: #fff;
+	margin: 0 auto;
+}
+
+/* [show]日時の設定 */
+.post_datetime {
+	color: #fff;
+	margin-top: 10px;
+}
+
+
+/* 「投稿」ボタンの設定 */
+.new_post_btn > .new_btn {
+	border-color: #D9E5FF;
+	margin-top: 10px;
+}
+
+.new_post_btn > .new_btn:hover {
+	border-color: #D9E5FF;
+	color: #D9E5FF;
+}
+
+/* 「投稿を編集」ボタンの設定 */
+.s_post_btn > .post_btn {
+	background-color: #990000;
+	border-color: #000;
+	color: #fff;
+	margin-left: 30px;
+	margin-top: 20px;
+}
+
+.s_post_btn > .post_btn:hover {
+	background-color: #FAEBD7;
+	border-color: #000;
+	color: #990000;
+}
+
+
+/* カテゴリー選択の設定 */
+.new_category {
+	margin-top: 20px;
+}
+
+
+/* [index] 表の設定 */
+.posts_index_ {
+	color: #fff;
+}
+
+.posts_index_table {
+	margin-left:  50px;
+}
+
+.posts_index_table td {
+	padding-top: 10px;
+	border-bottom: 1px solid #fff;
+}
+
+.posts_index_title {
+    width: 150px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.posts_index_user {
+    width: 100px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/* [index] 検索フォームの設定 */
+.posts_search > .posts_search_btn {
+	border-color: #EAD9FF;
+}
+
+.posts_search > .posts_search_btn:hover {
+	border-color: #EAD9FF;
+	color: #EAD9FF;
+}

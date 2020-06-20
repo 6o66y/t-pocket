@@ -1,0 +1,27 @@
+<div class="users_index">
+	<div class="col-md-2">
+		<%= render 'public/users/profile', user: current_user %>
+	</div>
+
+	<div class="col-md-6">
+		<div class="row">
+			<h2 class="col-md-5 text-center">Users</h2>
+
+			<!-- 検索フォーム -->
+			<%= search_form_for @q do |f| %>
+				<div class="col-md-5 text-right users_search">
+					<%= f.search_field :username_or_introduction_cont, placeholder: 'ユーザー名 or 自己紹介' %>
+
+					<%= f.submit '検索', class: 'users_search_btn' %>
+				</div>
+			<% end %>
+		</div>
+		<!-- ユーザー 一覧 -->
+		<%= render 'public/users/index', users: @users %>
+	</div>
+
+	<!-- おすすめユーザー -->
+	<div class="col-md-3 recommendations">
+		<%= render 'public/recommendations/recommendations', recommendations: @recommendations %>
+	</div>
+</div>

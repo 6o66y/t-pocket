@@ -1,0 +1,19 @@
+<table class="table to_do_list">
+	<thead>
+		<tr>
+			<th class="text-center col-md-11">To Do List</th>
+			<th class="col-md-1"></th>
+		</tr>
+	</thead>
+	<tbody>
+		<% to_do_lists.each do |to_do_list| %>
+			<tr>
+				<td><%= simple_format(to_do_list.to_do) %></td>
+				<td class="to_do_list_delete_"><%= link_to '削除', user_to_do_lists_path(to_do_list), method: :delete, remote: true, data: {confirm: '本当に削除しますか？'}, class: 'btn to_do_list_delete_btn' %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
+
+
+

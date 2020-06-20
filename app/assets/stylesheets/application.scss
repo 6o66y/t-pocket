@@ -1,0 +1,192 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+body, nav {
+	font-family: "Comic Sans MS", "ヒラギノ丸ゴ Pro W4", "メイリオ", sans-serif;
+}
+
+th {
+	font-size: 15px;
+}
+
+body {
+	background-color: #005500;
+	padding-top: 100px;
+	padding-bottom: 20px;
+}
+
+
+
+/* navbar */
+.p_h_btn {
+	margin-left :10px;
+	margin-right :10px;
+}
+
+.navbar-default {
+	background-color: #CC6600;
+	border-color: #990000;
+}
+
+.navbar-btn {
+	background-color: #990000;
+	border-color: #000;
+}
+
+.navbar-default .navbar-btn:hover {
+	background-color: #8B4513;
+	border-color: #000;
+}
+
+.navbar-default .navbar-nav > li > .navbar-btn:hover {
+	background-color: #8B4513;
+	border-color: #000;
+}
+
+.navbar-default .navbar-brand {
+	color: #fff;
+}
+
+.navbar-default .navbar-brand:hover {
+	color: #fff;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: #fff;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+	color: #fff;
+}
+
+.navbar-default .navbar-toggle {
+	border-color: #000;
+}
+
+.navbar-default .navbar-toggle:hover {
+	background-color: #8B4513;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+	background-color: #8B4513;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #FFE4C4;
+}
+
+.navbar-default .navbar-collapse, {
+	border-color: #990000;
+}
+/* navbar */
+
+
+
+
+/* サインイン・サインアップ 設定 */
+/* password */
+.devise {
+	background-color: #99CC99;
+	color: #fff;
+}
+
+.password h2 {
+	color: #fff;
+}
+
+.password label {
+	color: #fff;
+}
+/* password */
+
+
+/* sign_up */
+.sign_up h2 {
+	color: #fff;
+	margin-bottom: 50px;
+}
+
+.sign_up label, em {
+	color: #fff;
+}
+
+.sign_up em {
+	font-size: 10px;
+}
+
+.sign_up table {
+	margin-bottom: 30px;
+}
+
+.sign_up_table td {
+	padding-bottom: 10px;
+}
+
+.sigh_up_btn:hover {
+	border-color: #000;
+	color: #FF0000;
+}
+/* sign_up */
+
+
+
+/* sign_in */
+.sign_in h2 {
+	color: #fff;
+	margin-bottom: 50px;
+}
+
+.sign_in label {
+	color: #fff;
+}
+
+.sign_in table {
+	margin-bottom: 30px;
+}
+
+.sign_in_table td {
+	padding-bottom: 10px;
+}
+
+.sigh_in_btn:hover {
+	border-color: #000;
+	color: #FF0000;
+}
+
+.sigh_in_render {
+	color: #fff;
+}
+
+.sigh_in_render:hover {
+	color: #fff;
+}
+/* sign_in */
+
+
+/* error_messages */
+.error_messages {
+	color: #fff;
+	margin: 20px;
+}
+/* error_messages */
+
+
+
+
+
