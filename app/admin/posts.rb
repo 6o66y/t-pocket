@@ -5,7 +5,7 @@ ActiveAdmin.register Post do
 
   index do
     selectable_column
-    column :id
+    id_column
     column :user
     column :title
     column :category_id
