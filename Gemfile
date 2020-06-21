@@ -80,3 +80,9 @@ gem 'ransack'
 gem 'rubocop', require: false
 
 gem 'kaminari','~> 1.2.1'
+
+# MySQLを利用するために必要なgem
+gem 'dotenv-rails'
+group :production do
+  gem 'mysql2'
+end

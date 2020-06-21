@@ -33,4 +33,8 @@
 # .DS_Storeを除く
 .DS_Store
 
+# seeds.rbを除く
+/db/seeds.rb
 
+# .envを除く
+/.env
