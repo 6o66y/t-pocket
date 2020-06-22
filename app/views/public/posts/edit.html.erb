@@ -13,19 +13,19 @@
 	<%=form_with model: @post, url: post_path(@post), local: true do |f| %>
 		<div class="col-md-6">
 			<div class="row">
-				<%= f.text_field :title, placeholder: 'タイトル', class: 'post_title col-md-4' %>
+				<%= f.text_field :title, placeholder: 'タイトル -title- (100字以内)', class: 'post_title col-md-4' %>
 			</div>
 
 			<div class="row">
-				<%= f.text_area :objective, placeholder: 'めあて', class: 'post_objective col-md-12' %>
+				<%= f.text_area :objective, placeholder: 'めあて -objective-', class: 'post_objective col-md-12' %>
 			</div>
 
 			<div class="row">
-				<%= f.text_area :body, placeholder: 'テキスト', class: 'post_body col-md-12' %>
+				<%= f.text_area :body, placeholder: '詳細 -body-', class: 'post_body col-md-12' %>
 			</div>
 
 			<div class="row">
-				<%= f.text_area :review, placeholder: 'ふりかえり', class: 'post_review col-md-12' %>
+				<%= f.text_area :review, placeholder: 'ふりかえり -review-', class: 'post_review col-md-12' %>
 			</div>
 		</div>
 
