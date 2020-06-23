@@ -334,5 +334,17 @@
 
 
 
+/* forgot_password */
+.password_new button {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: #FF6928;
+	border-color: #990000;
+	color: #fff;
+}
 
-
+.password_new button:hover {
+	border-color: #990000;
+	color: #FF6928;
+}
+/* forgot_password */
