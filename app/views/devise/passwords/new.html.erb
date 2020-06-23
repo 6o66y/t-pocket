@@ -6,13 +6,17 @@
 
 	  <div class="field">
 	    <%= f.label :email %><br />
-	    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+	    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: '今回は実装していません' %>
 	  </div>
 
-	  <div class="actions">
-	    <%= f.submit "Send me reset password instructions" %>
+	  <div class="">
+	    <%#= f.submit "Send me reset password instructions" %>
 	  </div>
 	<% end %>
+
+	  <div class="password_new">
+	  	<button class="btn btn-default btn-xs">Send me reset password instructions</button>
+	  </div>
 
 	<%= render "devise/shared/links" %>
 </div>
