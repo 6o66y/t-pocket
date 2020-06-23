@@ -5,50 +5,59 @@
 
 /* おすすめの表示 */
 /* 見出しの設定 */
-.timeline h3 {
+.recommendations h3 {
 	color: #fff;
+	margin-left: 20px;
 }
 
-/* 表の設定 */
-.timeline_left_top {
-	border-top-left-radius: 10px;
+/* 一覧の設定 */
+.recommendations {
+	list-style: none;
+	width: 100%;
+	margin-top: 20px;
 }
 
-.timeline_right_top {
-	border-top-right-radius: 10px;
+.recommendations_ {
+	border-radius: 10px;
+	background-color: #FFFFE0;
+	margin-bottom: 5px;
+	padding: 1px;
 }
 
-.timeline_table th {
-	background-color: #FFFF00;
-	border-bottom: 1px solid #005500;
-	border-top: 3px solid #005500;
+.recommendations_ {
+	display: flex;
 }
 
-.timeline_table td {
-	background-color: #fff;
-	margin-bottom: 10px;
-	padding-right: 15px;
-	border-bottom: 3px solid #005500;
+.recommendations_ > div {
+	width: 40%;
+	height: 100%;
+	margin: 5px;
 }
 
-.timeline_name {
+.recommendations_user {
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: #000;
+}
+
+.recommendations_title {
+	color: #000;
 	width: 100px;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	margin: 0 auto;
+	margin-top: 30px;
 }
 
-.timeline_title {
-	width: 150px;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
-
-.timeline_ {
+.recommendations_like {
 	color: #000;
+	margin-top: 30px;
 }
+/* おすすめの表示 */
+
+
 
 /* 未読マーク */
 .unread {
