@@ -353,3 +353,23 @@
 	color: #FF6928;
 }
 /* forgot_password */
+
+
+
+
+@media screen and (max-width:1000px) {
+
+	/* show */
+	.users_show_table {
+		margin-left: 0px;
+	}
+
+	.user_s_recommendations {
+		margin-left: 0px;
+	}
+
+	/* index */
+	.users_index_table {
+		margin-left:  0px;
+	}
+}
