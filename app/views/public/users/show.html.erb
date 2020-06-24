@@ -86,6 +86,11 @@
 			<div class="row to_do_<% @user.id %>">
 				<%= render 'public/to_do_lists/to_do_list', to_do_lists: @to_do_lists %>
 			</div>
+		<% else %>
+			<div class="col-md-8 recommendations user_s_recommendations">
+				<!-- おすすめの投稿 -->
+				<%= render 'public/recommendations/recommendations', recommendations: @recommendations %>
+			</div>
 		<% end %>
 	</div>
 </div>

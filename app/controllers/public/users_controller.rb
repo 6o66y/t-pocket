@@ -16,6 +16,7 @@ class Public::UsersController < ApplicationController
     @user_posts = @user.posts.page(params[:page]).reverse_order
     @to_do_list = ToDoList.new
     @to_do_lists = @user.to_do_lists
+    @recommendations = Post.order('RANDOM()').limit(5)
   end
 
   def edit
