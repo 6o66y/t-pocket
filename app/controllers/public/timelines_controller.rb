@@ -8,7 +8,7 @@ class Public::TimelinesController < ApplicationController
     @user = User.find(current_user.id)
     @following_users = @user.following
     @posts = Post.where(user_id: @following_users).page(params[:page]).reverse_order
-    @recommendations = Post.order('RANDOM()').limit(5)
+    @recommendations = Post.order('RAND()').limit(5)
   end
 
   private

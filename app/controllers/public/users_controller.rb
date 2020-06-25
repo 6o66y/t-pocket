@@ -5,7 +5,7 @@ class Public::UsersController < ApplicationController
 
   def index
     @users = User.where(is_deleted: false).page(params[:page]).reverse_order
-    @recommendations = Post.order('RANDOM()').limit(5)
+    @recommendations = Post.order('RAND()').limit(5)
     # ransack
     @q = User.where(is_deleted: false).search(params[:q])
     @users = @q.result(distinct: true).page(params[:page]).reverse_order
@@ -16,7 +16,7 @@ class Public::UsersController < ApplicationController
     @user_posts = @user.posts.page(params[:page]).reverse_order
     @to_do_list = ToDoList.new
     @to_do_lists = @user.to_do_lists
-    @recommendations = Post.order('RANDOM()').limit(5)
+    @recommendations = Post.order('RAND()').limit(5)
   end
 
   def edit
