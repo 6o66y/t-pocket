@@ -53,7 +53,7 @@
 								<span class="glyphicon glyphicon-star" aria-hidden="true"></span> <%= post.likes.count %>
 							</div>
 							<!-- 未読マーク -->
-							<% if post.updated_at > current_user.read_at %>
+							<% if post.created_at > current_user.read_at %>
 								<span class="unread"></span>
 							<% end %>
 						<% end %>
@@ -103,7 +103,7 @@
 								<span class="glyphicon glyphicon-star" aria-hidden="true"></span> <%= post.likes.count %>
 							</div>
 							<!-- 未読マーク -->
-							<% if post.updated_at > current_user.read_at %>
+							<% if post.created_at > current_user.read_at %>
 								<span class="unread"></span>
 							<% end %>
 						<% end %>
