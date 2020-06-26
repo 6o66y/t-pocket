@@ -1,0 +1,122 @@
+<div class="row">
+	<table class="posts_index_table col-md-7">
+		<thead>
+			<tr>
+				<th class="text-center col-md-2">Users</th>
+				<th class="text-center col-md-3">Titles</th>
+				<th class="text-center col-md-2">Categories</th>
+				<th class="text-center col-md-2">Comments</th>
+				<th class="text-center col-md-2">Likes</th>
+			</tr>
+		</thead>
+
+		<tbody class="text-center">
+			<% posts.first(6).each do |post| %>
+				<tr>
+					<td>
+						<!-- ユーザー -->
+						<%= link_to user_path(post.user) do%>
+							<%= render 'public/users/profile_image', user: post.user %><br>
+							<div class="posts_index_ posts_index_user">
+								<%= post.user.username %>
+							</div>
+						<% end %>
+					</td>
+					<td>
+						<%= link_to post_path(post), data: {'turbolinks' => false} do%>
+							<!-- 投稿　タイトル -->
+							<div class="posts_index_ posts_index_title">
+								<%= post.title %>
+							</div>
+						<% end %>
+					</td>
+						<!-- カテゴリー -->
+					<td>
+						<%= link_to post_path(post), data: {'turbolinks' => false} do%>
+							<div class="posts_index_">
+								<%= post.category.name %>
+							</div>
+						<% end %>
+					</td>
+						<!-- コメント件数 -->
+					<td>
+						<%= link_to post_path(post), data: {'turbolinks' => false} do%>
+							<div class="posts_index_">
+								<%= post.comments.count %> <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+							</div>
+						<% end %>
+					</td>
+						<!-- いいね数 -->
+					<td>
+						<%= link_to post_path(post), data: {'turbolinks' => false} do%>
+							<div class="posts_index_">
+								<span class="glyphicon glyphicon-star" aria-hidden="true"></span> <%= post.likes.count %>
+							</div>
+							<!-- 未読マーク -->
+							<% if post.updated_at > current_user.read_at %>
+								<span class="unread"></span>
+							<% end %>
+						<% end %>
+					</td>
+				</tr>
+			<% end %>
+
+			<% posts.offset(6).each do |post| %>
+				<tr class="more">
+					<td>
+						<!-- ユーザー -->
+						<%= link_to user_path(post.user) do%>
+							<%= render 'public/users/profile_image', user: post.user %><br>
+							<div class="posts_index_ posts_index_user">
+								<%= post.user.username %>
+							</div>
+						<% end %>
+					</td>
+					<td>
+						<%= link_to post_path(post), data: {'turbolinks' => false} do%>
+							<!-- 投稿　タイトル -->
+							<div class="posts_index_ posts_index_title">
+								<%= post.title %>
+							</div>
+						<% end %>
+					</td>
+						<!-- カテゴリー -->
+					<td>
+						<%= link_to post_path(post), data: {'turbolinks' => false} do%>
+							<div class="posts_index_">
+								<%= post.category.name %>
+							</div>
+						<% end %>
+					</td>
+						<!-- コメント件数 -->
+					<td>
+						<%= link_to post_path(post), data: {'turbolinks' => false} do%>
+							<div class="posts_index_">
+								<%= post.comments.count %> <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+							</div>
+						<% end %>
+					</td>
+						<!-- いいね数 -->
+					<td>
+						<%= link_to post_path(post), data: {'turbolinks' => false} do%>
+							<div class="posts_index_">
+								<span class="glyphicon glyphicon-star" aria-hidden="true"></span> <%= post.likes.count %>
+							</div>
+							<!-- 未読マーク -->
+							<% if post.updated_at > current_user.read_at %>
+								<span class="unread"></span>
+							<% end %>
+						<% end %>
+					</td>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>
+
+<div class="row">
+	<div class="col-md-10">
+		<p class="open text-right">もっと見る…</p>
+		<p class="close_btn text-right"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></p>
+	</div>
+</div>
