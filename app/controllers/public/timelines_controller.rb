@@ -7,7 +7,7 @@ class Public::TimelinesController < ApplicationController
   def timeline
     @user = User.find(current_user.id)
     @following_users = @user.following
-    @posts = Post.where(user_id: @following_users)
+    @posts = Post.where(user_id: @following_users).order(created_at: :desc)
     @recommendations = Post.order('RAND()').limit(5)
   end
 
