@@ -8,16 +8,26 @@ ActiveAdmin.register AdminAccount do
     id_column
     column :email
     column :username
-    column :current_sign_in_at
-    column :sign_in_count
+    # column :current_sign_in_at
+    # column :sign_in_count
     column :created_at
     actions
   end
 
+  show do
+    attributes_table do
+      row :email
+      row :username
+      row :created_at
+      row :updated_at
+    end
+    active_admin_comments
+  end
+
   filter :email
   filter :username
-  filter :current_sign_in_at
-  filter :sign_in_count
+  # filter :current_sign_in_at
+  # filter :sign_in_count
   filter :created_at
 
   form do |f|
