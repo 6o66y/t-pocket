@@ -70,7 +70,7 @@
 
 		<div class="back_btn">
 			<% if @user != current_user %>
-				<%= link_to 'もどる', :back, data: {'turbolinks' => false}, class: 'btn navbar-btn' %>
+				<%= render 'public/back_btn' %>
 			<% end %>
 		</div>
 	</div>
