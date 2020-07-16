@@ -69,7 +69,9 @@
 		</div>
 
 		<div class="back_btn">
-			<%= link_to 'もどる', :back, data: {'turbolinks' => false}, class: 'btn navbar-btn' %>
+			<% if @user ||= current_user %>
+				<%= link_to 'もどる', :back, data: {'turbolinks' => false}, class: 'btn navbar-btn' %>
+			<% end %>
 		</div>
 	</div>
 
