@@ -193,18 +193,14 @@ body {
 
 
 /* back_btn */
-.back_btn {
-	display: inline-block;
-}
-
 .back_btn > .navbar-btn {
-	background-color: #fff;
-	border-color: #660000;
-	color: #660000;
-	margin-left: 5px;
+	background-color: Transparent;
+	border-color: #fff;
+	color: #fff;
+	margin-left: 20px;
 }
 
 .back_btn > .navbar-btn:hover {
-	background-color: #FAEBD7;
+	background-color: #220000;
 }
 /* back_btn */

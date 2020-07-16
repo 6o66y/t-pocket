@@ -13,7 +13,7 @@
 					<% end %>
 				</div>
 			<% end %>
-			<h2 class="col-md-5">Following (<%= @user.following.count %>)</h2>
+			<h2 class="col-md-5">フォロー中 (<%= @user.following.count %>)</h2>
 		</div>
 		<div class="row">
 			<%= render 'public/users/index', users: @users %>

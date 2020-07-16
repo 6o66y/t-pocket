@@ -30,10 +30,10 @@
 	<div class="row">
 		<% if user ||= current_user %>
 			<div class="following_btn">
-				<%= link_to 'Following', following_path(user), type: 'button', class: 'btn btn-default btn-sm col-md-5' %>
+				<%= link_to 'フォロー', following_path(user), type: 'button', class: 'btn btn-default btn-sm col-md-5' %>
 			</div>
 			<div class="follower_btn">
-				<%= link_to 'Followers', followers_path(user), type: 'button', class: 'btn btn-default btn-sm col-md-5' %>
+				<%= link_to 'フォロワー', followers_path(user), type: 'button', class: 'btn btn-default btn-sm col-md-5' %>
 			</div>
 		<% end %>
 	</div>
@@ -41,13 +41,13 @@
 
 	<div class="row edit_btn center-block">
 		<% if user == current_user %>
-			<%= link_to 'Edit',edit_user_path(user), type: 'button', class: 'btn btn-default col-md-12' %>
+			<%= link_to '',edit_user_path(user), type: 'button', class: 'btn btn-default col-md-12 glyphicon glyphicon-wrench' %>
 		<% end %>
 	</div>
 <% end %>
 
 <div class="row new_btn center-block">
-	<%= link_to 'New',new_post_path, type: 'button', class: 'btn btn-default col-md-12' %>
+	<%= link_to '',new_post_path, type: 'button', class: 'btn btn-default col-md-12 glyphicon glyphicon-pencil' %>
 </div>
 
 

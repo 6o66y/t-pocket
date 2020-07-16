@@ -1,6 +1,6 @@
 <div class="show">
 	<div class="row">
-		<h2 class="col-md-1 text-center">Show</h2>
+		<h2 class="col-md-2 text-center">投稿詳細</h2>
 	</div>
 
 	<div class="col-md-6">
@@ -88,6 +88,10 @@
 			<div class="comment_<% @post.id %>">
 				<%= render 'public/comments/comments', { post: @post, comments: @post.comments } %>
 			</div>
+		</div>
+
+		<div class="back_btn">
+			<%= link_to 'もどる', :back, data: {'turbolinks' => false}, class: 'btn navbar-btn' %>
 		</div>
 	</div>
 </div>
