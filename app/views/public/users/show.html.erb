@@ -5,17 +5,17 @@
 
 	<div class="col-md-5">
 		<div class="row">
-			<h2 class="col-md-4 text-center">Posts</h2>
+			<h2 class="col-md-4 text-center">投稿</h2>
 		</div>
 
 		<div class="row">
-			<table class="users_show_table col-md-7">
+			<table class="users_show_table col-md-10">
 				<thead>
 					<tr>
-						<th class="text-center col-md-3">Titles</th>
-						<th class="text-center col-md-3">Categories</th>
-						<th class="text-center col-md-3">Comments</th>
-						<th class="text-center col-md-3">Likes</th>
+						<th class="text-center col-md-3">タイトル</th>
+						<th class="text-center col-md-3">カテゴリー</th>
+						<th class="text-center col-md-2">コメント</th>
+						<th class="text-center col-md-2">いいね</th>
 					</tr>
 				</thead>
 
@@ -66,6 +66,10 @@
 			<div class="col-md-10">
 				<%= paginate @user_posts %>
 			</div>
+		</div>
+
+		<div class="back_btn">
+			<%= link_to 'もどる', :back, data: {'turbolinks' => false}, class: 'btn navbar-btn' %>
 		</div>
 	</div>
 

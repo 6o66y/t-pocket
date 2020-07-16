@@ -14,7 +14,6 @@
 					<div class="image3"></div>
 					<div class="image4"></div>
 					<div class="image5"></div>
-					<!-- <div class="image6"></div> -->
 				</div>
 			</div>
 		<% end %>
@@ -80,18 +79,18 @@
 			<% else %>
 				<div class="recommend_posts">
 					<% @recommend_posts.each do |recommend_post| %>
-					<div class="col-md-1">
-						<%= link_to posts_path, data: {'turbolinks' => false} do%>
-							<%= render 'public/users/profile_image', user: recommend_post.user %>
-						<% end %>
-					</div>
-					<div class="col-md-3">
-						<%= link_to posts_path, data: {'turbolinks' => false} do%>
-							<div class="recommend_posts_title">
-								<%= recommend_post.title %>
-							</div>
-						<% end %>
-					</div>
+						<div class="col-md-1">
+							<%= link_to posts_path, data: {'turbolinks' => false} do%>
+								<%= render 'public/users/profile_image', user: recommend_post.user %>
+							<% end %>
+						</div>
+						<div class="col-md-3">
+							<%= link_to posts_path, data: {'turbolinks' => false} do%>
+								<div class="recommend_posts_title">
+									<%= recommend_post.title %>
+								</div>
+							<% end %>
+						</div>
 					<% end %>
 				</div>
 			<% end %>
