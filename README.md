@@ -25,3 +25,25 @@
 
 ### 機能一覧
 https://docs.google.com/spreadsheets/d/1OXrxiTwRRHG40rKD5SPFdhRLrIZ1zepFQmzyPIaC97c/edit#gid=0
+
+## 開発環境
+### OS
+Linux(Ubuntu)
+
+### 言語
+HTML, CSS, JavaScript, Ruby, SQL
+
+### フレームワーク
+Ruby on Rails, Bootstrap, Flexbox
+
+### Railsライブラリ
+devise, activeadmin, refile, pry-byebug, ransack, rubocop, kaminari, capistrano
+
+### JSライブラリ
+jQuery
+
+### インフラ
+AWS(EC2, RDS, EIP)
+
+### その他ツールなど
+Vagrant, VirtualBox, Slack
